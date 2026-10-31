@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0044",
-    "release": "0044.1",
+    "id": "setup-0045",
+    "release": "0045.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -283,13 +283,13 @@
     {
       "id": "neuroport",
       "name": "Rocklin Augmentics NP-1",
-      "model": "Refurbished standard Neuroport",
+      "model": "Decades-old salvage retrofit",
       "site": "Neural interface",
-      "grade": "Standard · ordinary interface",
+      "grade": "Bargain-bin · obsolete external assembly",
       "load": 0,
       "status": "Opening loadout",
-      "summary": "Biomonitor, holophone, HUD, personal link and shard interface",
-      "detail": "Includes Neural Link, virtuality, two shard sockets and support for five neuralware options. Those physical option slots do not increase Load tolerance. Controller sits behind the right ear. When Ronin’s runtime is installed it uses one shard socket.",
+      "summary": "Exposed ear-mounted controller; basic interface functions only",
+      "detail": "Decades-old Rocklin hardware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two exposed adapter sockets accept shards; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. Easily noticed when uncovered and vulnerable to snagging, grabbing or direct damage. No deep-dive capability. Retains a biomonitor, basic holophone/HUD, neural link, virtuality display and five empty neuralware option connections. Ronin’s runtime occupies one shard socket when installed.",
       "icon": "chip"
     }
   ],
