@@ -1,0 +1,9 @@
+# Defence in depth only; publication uses an explicit allowlist.
+private/
+transcript/
+archive/
+work/
+.env
+.env.*
+*.zip
+CYBERPUNK-CAMPAIGN-HANDBOOK.md
