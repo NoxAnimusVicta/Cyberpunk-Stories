@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot": {
     "id": "setup-0047",
-    "release": "0047.1",
+    "release": "0047.2",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -27,7 +27,7 @@
   "build": {
     "method": "27-point buy",
     "points_spent": 27,
-    "human_bonus": "Standard human: +1 to all six attributes. No starting feat.",
+    "human_bonus": "Standard human: +1 to all six attributes.",
     "class_skills": [
       "Investigation",
       "History"
@@ -159,7 +159,7 @@
   },
   "resources": {
     "hp_current": 10,
-    "hp_note": "Full health. Superficial cuts and bruises; no critical injuries or physical impairment.",
+    "hp_note": "Full health. Superficial cuts and bruises.",
     "xp": 0,
     "next_level_xp": 300,
     "slot_max": 1,
@@ -270,14 +270,14 @@
   "cyberware": [
     {
       "id": "eyes",
-      "name": "Sponsored Cybereyes",
-      "model": "Refurbished matched pair",
+      "name": "Cyclops Civic C2",
+      "model": "Ad-subsidised optics · refurbished pair",
       "site": "Ocular system",
       "grade": "Budget · ordinary replacement",
       "load": 0,
       "status": "Opening loadout",
-      "summary": "Normal vision with a restricted, advertising-heavy display",
-      "detail": "Cyan iris shells, a Chyron HUD and two empty option slots per eye. Disadvantage on sight-based Perception until replaced; hearing-only Perception is unaffected. Sight-based passive Perception 7; other senses 12. No attack, AC or saving throw penalty, blindness or obscuration. No enhanced night vision or targeting modules.",
+      "summary": "Cyan iris shells · Chyron HUD · two empty option slots per eye",
+      "detail": "Cyclops International Civic C2 replacement eyes, a second-hand matched pair fitted by Maelstrom. Human-shaped housings with cyan iris shells provide ordinary vision and a built-in Chyron HUD. Each eye has two empty optical option slots. Persistent advertising crowds the display, imposing disadvantage on sight-based Perception until replacement. Passive Perception: sight 7; other senses 12.",
       "icon": "eye"
     },
     {
@@ -289,7 +289,7 @@
       "load": 0,
       "status": "Opening loadout",
       "summary": "Exposed ear-mounted controller; basic interface functions only",
-      "detail": "Decades-old Rocklin cyberware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two exposed adapter sockets accept shards; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. When the distinctive casing is visible, observers have advantage on Perception checks to recognise or identify Fen using it as an identifying feature. Concealing it beneath his hair removes that visual cue. No Stealth penalty. Exposed connections are vulnerable to snagging, grabbing or direct damage. No deep-dive capability. Retains a biomonitor, basic holophone/HUD, neural link, virtuality display and five empty neuralware option connections. Ronin’s runtime occupies one shard socket when installed.",
+      "detail": "Decades-old Rocklin cyberware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two exposed adapter sockets accept shards; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. When the distinctive casing is visible, observers have advantage on Perception checks to recognise or identify Fen using it as an identifying feature. Concealing it beneath his hair removes that visual cue. Exposed connections are vulnerable to snagging, grabbing or direct damage. Retains a biomonitor, basic holophone/HUD, neural link, virtuality display and five empty neuralware option connections. Ronin’s runtime occupies one shard socket when installed.",
       "icon": "chip"
     }
   ],
@@ -326,7 +326,7 @@
     "injuries": "The first damaging drop from positive HP to 0 in an encounter causes one critical injury. A critical hit above 0 does not. Standard injuries require treatment and 7 qualifying convalescence days; major injuries associated with a failed death save require surgery and 21 days.",
     "intrusion": "Establish a real route and discover a compatible endpoint. Technology +4 is your intrusion check. Fast intrusion may be included in a hostile direct program’s action: failed breach spends the action, not the slot; success then resolves the program normally. Ordinary local discovery is 60 feet; an already known endpoint can use the program’s range through an available route.",
     "capacity": "Load may exceed tolerance, with overload risks. The fragment doubles native tolerance; it does not remove installation shock or the need for treatment. Baseline replacements and class apparatus are Load 0.",
-    "progression": "Level 2 at 300 total XP: two tier-1 slots, three known programs and two Firmware Upgrades. Level 3: Interface Platform. No level-2 or level-3 features are active yet."
+    "progression": "Level 2 at 300 total XP: two tier-1 slots, three known programs and two Firmware Upgrades. Level 3: Interface Platform."
   },
   "sources": [
     {
