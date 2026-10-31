@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0042",
-    "release": "0042.1",
+    "id": "setup-0043",
+    "release": "0043.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
-    "location": "Night City",
-    "note": "Level-1 build prepared for review. The opening scene, contract and fragment installation have not been played."
+    "location": "Night City"
   },
   "identity": {
     "name": "Fen Vikutā",
@@ -29,7 +28,6 @@
     "method": "27-point buy",
     "points_spent": 27,
     "human_bonus": "Standard human: +1 to all six attributes. No starting feat.",
-    "reason": "Broad scientific and technical competence, strong Cool, ordinary physical training. Combat Architecture supplies a limited survival margin appropriate to Ronin’s operational origin.",
     "class_skills": [
       "Investigation",
       "History"
@@ -37,8 +35,7 @@
     "background_skills": [
       "Science",
       "Technology"
-    ],
-    "choices_status": "Designed under player delegation for review; no story actions enacted."
+    ]
   },
   "attributes": [
     {
@@ -136,13 +133,13 @@
       "English",
       "Mandarin"
     ],
-    "languages_note": "Japanese native; Streetslang; English from human language choice; Mandarin from researcher background. These grant no corporate credentials.",
-    "tools_note": "Cybertech proficiency is retained; no kit is currently supplied by the penniless opening."
+    "languages_note": "Japanese (native), Streetslang, English and Mandarin.",
+    "tools_note": "Cybertech kit proficient; kit not owned."
   },
   "derived": {
     "hp_max": 10,
     "ac": 11,
-    "ac_basis": "Unarmoured: 10 + Reflexes (+1). Reference clothing grants no armour bonus.",
+    "ac_basis": "Unarmoured: 10 + Reflexes (+1).",
     "initiative": 1,
     "speed_ft": 30,
     "program_attack": 5,
@@ -162,7 +159,7 @@
   },
   "resources": {
     "hp_current": null,
-    "hp_note": "Opening postoperative assessment is pending; maximum HP is 10. No damage or healing has been enacted.",
+    "hp_note": "Current HP, injuries and exhaustion: unassessed.",
     "xp": 0,
     "next_level_xp": 300,
     "slot_max": 1,
@@ -171,7 +168,7 @@
     "temporary_hp": 0,
     "injuries_status": "Opening assessment pending",
     "exhaustion_status": "Opening assessment pending",
-    "fragment_status": "Agreed benefit; installation occurs in play",
+    "fragment_status": "Not installed",
     "rest_note": "One tier-1 slot returns after a short or long rest. Neither automatically restores HP."
   },
   "programs": [
@@ -203,7 +200,7 @@
       "concentration": false,
       "summary": "Forge an image or sound through nearby presentation hardware.",
       "effect": "Create one sound, from a whisper to a scream, or a static object image within a 5-foot cube. An image adds no sound, smell, light or solidity. Physical interaction reveals an image. A creature examining it with an action can identify the deception with Intelligence (Investigation) DC 13. Ends on dismissal (action), replacement by another execution or after 1 minute.",
-      "requirements": "A reachable speaker for sound, or a suitable display/projector/compatible sensory interface for the image, plus actual access. The machinery must be able to cover the stated space. A camera cannot project; Fen does not own a free hologram emitter.",
+      "requirements": "A reachable speaker for sound, or a suitable display/projector/compatible sensory interface for the image, plus actual access. The machinery must be able to cover the stated space.",
       "scaling": "Utility; no slot and no level-based increase.",
       "icon": "eye"
     },
@@ -267,7 +264,7 @@
       "name": "Ronin Fragment",
       "original": "Campaign exception",
       "summary": "Native tolerance 11 → enhanced tolerance 22",
-      "detail": "While slotted and operating, tolerance is twice native tolerance plus earned adaptation. Native = max(4, 6 + permanent Constitution modifier + permanent Cool modifier) = 11. Enhanced = 22; earned adaptation currently 0. Runs locally without a continuous patron connection. Normal installation shock, trauma, treatment and overload rules remain. Disabling/removal recalculates overload, not an instant episode. This preview does not enact the contract or installation."
+      "detail": "While slotted and operating, tolerance is twice native tolerance plus earned adaptation. Native = max(4, 6 + permanent Constitution modifier + permanent Cool modifier) = 11. Enhanced = 22; earned adaptation currently 0. Runs locally without a continuous patron connection. Normal installation shock, trauma, treatment and overload rules remain. Disabling/removal recalculates overload, not an instant episode."
     }
   ],
   "cyberware": [
@@ -292,7 +289,7 @@
       "load": 0,
       "status": "Opening loadout",
       "summary": "Biomonitor, holophone, HUD, personal link and shard interface",
-      "detail": "Includes Neural Link, virtuality, two shard sockets and support for five neuralware options. Those physical option slots do not increase Load tolerance. Controller sits behind the right ear. NP-1 is our campaign model designation. No premium enhancement or free intrusion bypass. When Ronin’s runtime is installed it uses one shard socket.",
+      "detail": "Includes Neural Link, virtuality, two shard sockets and support for five neuralware options. Those physical option slots do not increase Load tolerance. Controller sits behind the right ear. When Ronin’s runtime is installed it uses one shard socket.",
       "icon": "chip"
     }
   ],
@@ -300,20 +297,11 @@
     {
       "id": "clothes",
       "name": "Clothing",
-      "status": "Opening details pending",
+      "status": "Worn",
       "location": "On you",
-      "summary": "The supplied artwork is the appearance reference; opening outfit condition is not yet enacted.",
-      "detail": "No armour, weapon, cash, tool kit, ammunition or consumable is granted by the illustration. The penniless opening overrides the ordinary Contractor equipment package.",
+      "summary": "Personal clothing",
+      "detail": "Unarmoured clothing.",
       "icon": "pack"
-    },
-    {
-      "id": "shard",
-      "name": "Ronin runtime shard",
-      "status": "Expected · not yet received",
-      "location": "Not on you",
-      "summary": "Bounded class runtime, delivered during the opening conversation",
-      "detail": "One physical shard, not a full personality construct. Consent and insertion remain your actions in the opening. The level-1 program loadout shown here previews its class capabilities.",
-      "icon": "chip"
     }
   ],
   "finances": {
@@ -325,18 +313,11 @@
   },
   "journal": [
     {
-      "id": "opening",
-      "type": "Campaign",
-      "date": "Late 2078",
-      "title": "A new life, off the corporate ledger",
-      "body": "Night City is the starting point. The story has not begun. This companion previews Fen’s level-1 build and agreed opening equipment; the first conversation with Ronin will happen in play."
-    },
-    {
       "id": "identity",
       "type": "Background",
-      "date": "Before the opening",
+      "date": "2078",
       "title": "Fen Vikutā",
-      "body": "Japan-raised, 29, an Arasaka researcher by trade. Engram modelling, cognitive systems and lab software were familiar ground. Field operations were not. Fen introduces himself surname first; most non-native Japanese speakers call him Fen."
+      "body": "Raised in Japan. Former Arasaka researcher specialising in engram modelling, cognitive systems and laboratory software."
     }
   ],
   "rules": {
@@ -360,5 +341,17 @@
       "label": "Safari installation guide",
       "url": "https://support.apple.com/en-ie/guide/iphone/iphea86e5236/27/ios/27"
     }
-  ]
+  ],
+  "clock": {
+    "calendar": "Gregorian",
+    "year": 2078,
+    "month": null,
+    "day": null,
+    "hour": null,
+    "minute": null,
+    "period": "Late 2078",
+    "location": "Night City",
+    "time_basis": "Local time",
+    "event_id": null
+  }
 }
