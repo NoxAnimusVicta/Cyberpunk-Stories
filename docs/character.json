@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0047",
-    "release": "0047.2",
+    "id": "setup-0051",
+    "release": "0051.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -183,8 +183,8 @@
       "duration": "Instantaneous",
       "concentration": false,
       "summary": "Overload exposed circuitry with a precise destructive packet.",
-      "effect": "Make one ranged program attack (+5) against a visible compatible powered target. On a hit, deal 1d10 system [force] damage. At total levels 5, 11 and 17, send 2, 3 and 4 packets respectively, each with its own attack and target. No Cool modifier is added to damage at level 1.",
-      "requirements": "A live route to compatible powered cyberware, an electronic actor/object or ICE. Bare organic flesh is not a target. Use ordinary AC/cover for embodied targets and virtual AC for ICE. Ordinary attack criticals and close-range disadvantage apply.",
+      "effect": "Make one ranged program attack (+5) against a visible compatible powered target. On a hit, deal 1d10 electrical damage to physical HP, or 1d10 Data damage to ICE integrity in software mode. At total levels 5, 11 and 17, send 2, 3 and 4 packets respectively, each with its own attack and target. No Cool modifier is added to damage at level 1.",
+      "requirements": "Physical mode: a live route to compatible powered cyberware or an electronic actor/object capable of delivering destructive current. Software mode: reachable ICE in a live session. Declare each packet’s mode before attacking. Use ordinary AC/cover for physical targets and virtual AC for ICE.",
       "scaling": "Output Amplifier is a possible level-2 Firmware Upgrade, not currently installed.",
       "icon": "bolt"
     },
@@ -215,8 +215,8 @@
       "duration": "1 hour",
       "concentration": true,
       "summary": "Mark a neural weakness and exploit it with each successful attack.",
-      "effect": "Choose a visible reachable neural or robotic target; no initial save. Your attacks against it deal an extra 1d6 tissue [necrotic] neural/integrity damage on a hit. Choose one ability: its checks have disadvantage, not its saving throws. After it reaches 0 HP, transfer the tag to another legal target with a bonus action on a subsequent turn.",
-      "requirements": "Compatible reachable neural or robotic hardware and a valid route/session. Cannot tag an offline unaugmented person. Normal intrusion and Trace rules apply. A lost route ends a remotely controlled effect at turn end.",
+      "effect": "Choose a visible reachable neural or robotic target; no initial save. Your attacks against it deal an extra 1d6 damage matching the triggering attack’s primary damage type on a hit. Choose one ability: its checks have disadvantage, not its saving throws. After it reaches 0 HP, transfer the tag to another legal target with a bonus action on a subsequent turn. A software-target mode can mark reachable ICE; the rider on a Data attack deals Data damage. For mixed attacks, the direct base damage is primary; if the base is mixed, use its first printed component.",
+      "requirements": "Compatible reachable neural or robotic hardware and a valid route/session. Cannot tag an offline unaugmented person. Normal intrusion and Trace rules apply. A lost route ends a remotely controlled effect at turn end. Software marking requires a reachable ICE instance and a live session.",
       "scaling": "Tier 3–4: up to 8 hours. Tier 5+: up to 24 hours. Tier 2: still 1 hour. Firmware clearance can end it.",
       "icon": "target"
     },
