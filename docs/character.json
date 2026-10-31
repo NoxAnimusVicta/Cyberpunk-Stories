@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0056",
-    "release": "0056.1",
+    "id": "setup-0057",
+    "release": "0057.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -323,7 +323,7 @@
     "intrusion": "Quickhacks upload wirelessly within their printed range. Target identification and upload are part of execution; resolve the Program’s attack or Saving Throw. Utilities are at will; tiered Programs spend an Execution Slot. Effects need a physical source: powered Cyberware for an overload, fuel and ignition for a combustion blast, or a chemical payload for toxins.",
     "capacity": "Native Neural Tolerance = max(4, 6 + Constitution modifier + Cool modifier) = 11. Add earned Adaptation, currently 0. Current Load: 0. Load above tolerance creates overload risk. Baseline replacements are Load 0.",
     "progression": "Level 2 at 300 total XP: two tier-1 slots, three known programs and two Firmware Upgrades. Level 3: Interface Platform.",
-    "secured_intrusion": "Technology (+4) handles protected files and persistent system access. Finding a hidden endpoint and breaching a secured domain each take an Action when required; the breach uses its security DC. Known endpoints and valid credentials bypass the corresponding step. This technical work costs no Execution Slot."
+    "secured_intrusion": "Use Intelligence (Technology), currently +4, for meaningful obstacles such as protected files or persistent access. Routine work needs no roll; complex jobs can involve several distinct checks. This costs no Execution Slot. Active opposition can instead become a deep-dive combat encounter using normal initiative, actions, attacks and saves, with suitable deep-dive equipment."
   },
   "sources": [
     {
