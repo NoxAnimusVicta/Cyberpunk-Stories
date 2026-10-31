@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0051",
-    "release": "0051.1",
+    "id": "setup-0055",
+    "release": "0055.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -68,7 +68,7 @@
       "bonus": 1,
       "score": 14,
       "modifier": 2,
-      "description": "Physical resilience, HP and concentration.",
+      "description": "Physical resilience, HP and Concentration.",
       "save_proficient": false
     },
     {
@@ -148,14 +148,14 @@
     "hit_dice_total": 1,
     "concentration_save": 2,
     "native_tolerance": 11,
-    "fragment_tolerance": 22,
     "adaptation": 0,
     "load": 0,
     "passive_perception": 12,
     "passive_sight": 7,
     "passive_investigation": 14,
     "carry_lb": 135,
-    "virtual_ac": 14
+    "virtual_ac": 14,
+    "current_tolerance": 11
   },
   "resources": {
     "hp_current": 10,
@@ -168,8 +168,7 @@
     "temporary_hp": 0,
     "injuries_status": "None",
     "exhaustion_status": "None",
-    "fragment_status": "Not installed",
-    "rest_note": "One tier-1 slot returns after a short or long rest. Neither automatically restores HP."
+    "rest_note": "One tier-1 slot returns after a Short Rest or Long Rest. Neither automatically restores HP."
   },
   "programs": [
     {
@@ -183,7 +182,7 @@
       "duration": "Instantaneous",
       "concentration": false,
       "summary": "Overload exposed circuitry with a precise destructive packet.",
-      "effect": "Make one ranged program attack (+5) against a visible compatible powered target. On a hit, deal 1d10 electrical damage to physical HP, or 1d10 Data damage to ICE integrity in software mode. At total levels 5, 11 and 17, send 2, 3 and 4 packets respectively, each with its own attack and target. No Cool modifier is added to damage at level 1.",
+      "effect": "Make one ranged program attack (+5) against a visible compatible powered target. On a hit, deal 1d10 Electrical damage to physical HP, or 1d10 Data damage to ICE integrity in software mode. At total levels 5, 11 and 17, send 2, 3 and 4 packets respectively, each with its own attack and target. No Cool modifier is added to damage at level 1.",
       "requirements": "Physical mode: a live route to compatible powered cyberware or an electronic actor/object capable of delivering destructive current. Software mode: reachable ICE in a live session. Declare each packet’s mode before attacking. Use ordinary AC/cover for physical targets and virtual AC for ICE.",
       "scaling": "Output Amplifier is a possible level-2 Firmware Upgrade, not currently installed.",
       "icon": "bolt"
@@ -210,12 +209,12 @@
       "original": "Hex",
       "tier": 1,
       "channel": "D",
-      "action": "Bonus action",
+      "action": "Bonus Action",
       "range": "90 ft",
       "duration": "1 hour",
       "concentration": true,
       "summary": "Mark a neural weakness and exploit it with each successful attack.",
-      "effect": "Choose a visible reachable neural or robotic target; no initial save. Your attacks against it deal an extra 1d6 damage matching the triggering attack’s primary damage type on a hit. Choose one ability: its checks have disadvantage, not its saving throws. After it reaches 0 HP, transfer the tag to another legal target with a bonus action on a subsequent turn. A software-target mode can mark reachable ICE; the rider on a Data attack deals Data damage. For mixed attacks, the direct base damage is primary; if the base is mixed, use its first printed component.",
+      "effect": "Choose a visible reachable neural or robotic target; no initial save. Your attacks against it deal an extra 1d6 damage matching the triggering attack’s primary damage type on a hit. Choose one ability: its checks have disadvantage, not its Saving Throws. After it reaches 0 HP, transfer the tag to another legal target with a Bonus Action on a subsequent turn. A software-target mode can mark reachable ICE; the rider on a Data attack deals Data damage. For mixed attacks, the direct base damage is primary; if the base is mixed, use its first printed component.",
       "requirements": "Compatible reachable neural or robotic hardware and a valid route/session. Cannot tag an offline unaugmented person. Normal intrusion and Trace rules apply. A lost route ends a remotely controlled effect at turn end. Software marking requires a reachable ICE instance and a live session.",
       "scaling": "Tier 3–4: up to 8 hours. Tier 5+: up to 24 hours. Tier 2: still 1 hour. Firmware clearance can end it.",
       "icon": "target"
@@ -242,8 +241,8 @@
       "id": "burst-processing",
       "name": "Burst Processing",
       "original": "Pact Magic",
-      "summary": "2 utilities · 2 tier-1 programs · 1 execution slot",
-      "detail": "Cool is your program ability. Attack +5; save DC 13. Known software is fixed between levels. One tier-1 slot returns on a short or long rest. Utilities consume no slot. One concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. After a bonus-action program, other programs on that turn may only be action utilities. All programs need their real equipment and access."
+      "summary": "2 utilities · 2 tier-1 programs · 1 Execution Slot",
+      "detail": "Cool is your program ability. Attack +5; save DC 13. Known software is fixed between levels. One tier-1 slot returns on a Short Rest or Long Rest. Utilities consume no slot. One Concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. After a Bonus Action program, other programs on that turn may only be action utilities. All programs need their real equipment and access."
     },
     {
       "id": "kill-confirmation",
@@ -258,13 +257,6 @@
       "original": "Corporate Researcher",
       "summary": "Find the likely archive, department or specialist for a technical question",
       "detail": "You know how to identify the likely department or archive for a technical question and how to request access. Credentials, trust, time and actual access still matter. Former employment does not restore revoked permissions."
-    },
-    {
-      "id": "fragment",
-      "name": "Ronin Fragment",
-      "original": "Campaign exception",
-      "summary": "Native tolerance 11 → enhanced tolerance 22",
-      "detail": "While slotted and operating, tolerance is twice native tolerance plus earned adaptation. Native = max(4, 6 + permanent Constitution modifier + permanent Cool modifier) = 11. Enhanced = 22; earned adaptation currently 0. Runs locally without a continuous patron connection. Normal installation shock, trauma, treatment and overload rules remain. Disabling/removal recalculates overload, not an instant episode."
     }
   ],
   "cyberware": [
@@ -278,7 +270,9 @@
       "status": "Opening loadout",
       "summary": "Cyan iris shells · Chyron HUD · two empty option slots per eye",
       "detail": "Cyclops International Civic C2 replacement eyes, a second-hand matched pair fitted by Maelstrom. Human-shaped housings with cyan iris shells provide ordinary vision and a built-in Chyron HUD. Each eye has two empty optical option slots. Persistent advertising crowds the display, imposing disadvantage on sight-based Perception until replacement. Passive Perception: sight 7; other senses 12.",
-      "icon": "eye"
+      "icon": "eye",
+      "acquired": true,
+      "installed": true
     },
     {
       "id": "neuroport",
@@ -289,8 +283,10 @@
       "load": 0,
       "status": "Opening loadout",
       "summary": "Exposed ear-mounted controller; basic interface functions only",
-      "detail": "Decades-old Rocklin cyberware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two exposed adapter sockets accept shards; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. When the distinctive casing is visible, observers have advantage on Perception checks to recognise or identify Fen using it as an identifying feature. Concealing it beneath his hair removes that visual cue. Exposed connections are vulnerable to snagging, grabbing or direct damage. Retains a biomonitor, basic holophone/HUD, neural link, virtuality display and five empty neuralware option connections. Ronin’s runtime occupies one shard socket when installed.",
-      "icon": "chip"
+      "detail": "Decades-old Rocklin cyberware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two empty exposed adapter sockets accept shards; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. When the distinctive casing is visible, observers have advantage on Perception checks to recognise or identify Fen using it as an identifying feature. Concealing it beneath his hair removes that visual cue. Exposed connections are vulnerable to snagging, grabbing or direct damage. Retains a biomonitor, basic holophone/HUD, neural link, virtuality display and five empty neuralware option connections.",
+      "icon": "chip",
+      "acquired": true,
+      "installed": true
     }
   ],
   "inventory": [
@@ -321,11 +317,11 @@
     }
   ],
   "rules": {
-    "rests": "Short rest: 1 hour, restores Contractor slots. Long rest: 8 hours under the normal 2014 rules, restores class resources and half total Hit Dice (minimum 1), but no automatic HP.",
+    "rests": "Short Rest: 1 hour, restores Contractor slots. Long Rest: 8 hours under the normal 2014 rules, restores class resources and half total Hit Dice (minimum 1), but no automatic HP.",
     "convalescence": "Once per 24 hours, after 8 hours of rest with food, water and appropriate first aid, spend up to one quarter of total Hit Dice rounded up (half in a stocked clinic). At level 1 this is one d8 + 2, minimum 0 HP. Critical injuries must be treated first.",
     "injuries": "The first damaging drop from positive HP to 0 in an encounter causes one critical injury. A critical hit above 0 does not. Standard injuries require treatment and 7 qualifying convalescence days; major injuries associated with a failed death save require surgery and 21 days.",
-    "intrusion": "Establish a real route and discover a compatible endpoint. Technology +4 is your intrusion check. Fast intrusion may be included in a hostile direct program’s action: failed breach spends the action, not the slot; success then resolves the program normally. Ordinary local discovery is 60 feet; an already known endpoint can use the program’s range through an available route.",
-    "capacity": "Load may exceed tolerance, with overload risks. The fragment doubles native tolerance; it does not remove installation shock or the need for treatment. Baseline replacements and class apparatus are Load 0.",
+    "intrusion": "Electronic Access uses Technology (+4). Through an available wired or wireless route, scanning for an endpoint takes an Action; breaching its security takes an Action and a Technology check against its security DC. Known endpoints and valid credentials can bypass the corresponding step. Ordinary local discovery reaches 60 feet. Access covers only the breached system and its permissions.",
+    "capacity": "Native Neural Tolerance = max(4, 6 + Constitution modifier + Cool modifier) = 11. Add earned Adaptation, currently 0. Current Load: 0. Load above tolerance creates overload risk. Baseline replacements are Load 0.",
     "progression": "Level 2 at 300 total XP: two tier-1 slots, three known programs and two Firmware Upgrades. Level 3: Interface Platform."
   },
   "sources": [
