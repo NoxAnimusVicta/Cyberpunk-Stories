@@ -30,3 +30,31 @@
 /* Keyboard focus stays visible; pointer/touch focus does not draw a box. */
 button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .hardware-art.fragment{background-image:none;display:grid;place-items:center}.hardware-art.fragment:after{content:"R";font-size:72px;color:var(--red)}
+
+/* Class reference: dense rules remain behind deliberate disclosures. */
+.class-reference-entry{margin-top:24px}
+.class-reference-dialog{max-width:1000px;width:calc(100% - 32px)}
+.class-reference-dialog #detail-content{min-width:0}
+.reference-lead{color:var(--cyan);font-family:Rajdhani,sans-serif;font-size:19px;letter-spacing:.6px}
+.reference-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;margin:22px 0}
+.reference-tabs button{min-height:44px;border:1px solid #44232c;background:#150e15;color:#c6b9bf;font:600 16px Rajdhani,sans-serif;cursor:pointer;padding:8px}
+.reference-tabs button[aria-pressed="true"]{color:#fff;border-color:var(--red);background:#42131e}
+.reference-page[hidden],.reference-disclosure[hidden]{display:none}
+.reference-page{min-width:0;overflow-wrap:anywhere}
+.reference-table{max-width:100%;overflow-x:auto;margin:16px 0}
+.reference-table table{width:100%;margin:0}
+.reference-table table:has(th:nth-child(5)){min-width:680px}
+.reference-table th{text-align:left;color:var(--cyan);font-size:12px;padding:12px 10px;white-space:nowrap}
+.reference-table td{font-size:13px;vertical-align:top;padding:10px;text-align:left}
+.reference-table tr:first-child th:first-child{min-width:48px}
+.reference-disclosure{border-bottom:1px solid #44232c}
+.reference-disclosure>summary{padding:16px 8px;min-height:48px;cursor:pointer;font:600 19px Rajdhani,sans-serif;color:#e8dfe3;line-height:1.35}
+.reference-disclosure[open]>summary{color:var(--cyan)}
+.reference-copy{padding:0 10px 18px}
+.reference-copy p,.reference-page>p,.reference-page li{line-height:1.7;font-size:14px}
+.reference-copy h4{color:var(--cyan);font:600 17px Rajdhani,sans-serif;margin:16px 0 4px}
+.choice-prerequisite{color:#d9a8af;font-size:12px!important}
+.reference-search-label{display:block;margin:16px 0 8px;font:600 17px Rajdhani,sans-serif}
+.reference-page .search{width:100%;box-sizing:border-box;min-height:44px;background:#140f16;color:#e8dfe3}
+.reference-credit{margin-top:32px!important;color:#9b8a94!important;font-size:11px!important;line-height:1.5}
+@media(max-width:600px){.reference-tabs{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.class-reference-dialog{width:calc(100% - 16px)}.reference-copy{padding-left:2px;padding-right:2px}.reference-disclosure>summary{font-size:18px}.reference-table td{font-size:12px;padding:9px}}
