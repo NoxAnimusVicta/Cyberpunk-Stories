@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0046",
-    "release": "0046.1",
+    "id": "setup-0047",
+    "release": "0047.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -296,47 +296,11 @@
   "inventory": [
     {
       "id": "clothes",
-      "name": "Arasaka long coat",
+      "name": "Clothing",
       "status": "Worn",
       "location": "On you",
-      "summary": "Black tailored coat · red lining and chest emblem",
-      "detail": "A calf-length black coat with structured shoulders, a high collar and red edging. Red lining shows through the split hem; the red Arasaka emblem sits on the left chest. Scuffed and dirty from the escape and rough handling. The pockets have been emptied. Clothing, not armour.",
-      "icon": "pack"
-    },
-    {
-      "id": "shirt",
-      "name": "High-neck shirt",
-      "status": "Worn",
-      "location": "On you",
-      "summary": "Fitted black shirt · narrow red collar trim",
-      "detail": "A close-fitting black shirt with a high neck and a narrow red accent at the collar. Worn beneath the coat; no protective plating.",
-      "icon": "pack"
-    },
-    {
-      "id": "trousers",
-      "name": "Trousers & belt",
-      "status": "Worn",
-      "location": "On you",
-      "summary": "Tapered black trousers · red hip straps",
-      "detail": "Black trousers taper into the boots. A black belt with a rectangular metal buckle sits at the waist, with red straps hanging at the hips and upper thighs. Pockets empty.",
-      "icon": "pack"
-    },
-    {
-      "id": "gloves",
-      "name": "Panelled gloves",
-      "status": "Worn",
-      "location": "On you",
-      "summary": "Black full-finger gloves · red back panels",
-      "detail": "Black full-finger gloves with red panels across the backs and fastening straps at the wrists. Ordinary clothing, without built-in weapons or cyberware.",
-      "icon": "pack"
-    },
-    {
-      "id": "boots",
-      "name": "Buckled boots",
-      "status": "Worn",
-      "location": "On you",
-      "summary": "Tall black boots · red toes, soles and side panels",
-      "detail": "Mid-calf black boots with red toe, sole and side detailing, secured by multiple dark buckle straps. Scuffed from the flight through the facility and streets.",
+      "summary": "Black-and-red Arasaka outfit · long coat, shirt, trousers, gloves and boots",
+      "detail": "A tailored, calf-length black coat with structured shoulders, a high collar, red edging and red lining visible through the split hem. A red Arasaka emblem marks the left chest. Beneath it: a fitted black high-neck shirt with narrow red trim, tapered black trousers, and a black belt with a rectangular metal buckle and red straps at the hips. Black full-finger gloves have red back panels and wrist straps; mid-calf black boots have multiple buckle straps with red toes, soles and side panels. Scuffed and dirty from the escape and rough handling, but wearable. Pockets empty.",
       "icon": "pack"
     }
   ],
