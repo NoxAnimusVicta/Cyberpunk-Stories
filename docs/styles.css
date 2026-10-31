@@ -12,3 +12,5 @@
 /* Keep intrinsic text widths inside phone grids. */
 .two-col{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col>*{min-width:0}.record-main{overflow-wrap:anywhere}
 @media(max-width:700px){.two-col{grid-template-columns:1fr}.detail-stats>div{min-width:0}.attribute .attr-top{align-items:flex-start;gap:3px}.attribute .attr-name{font-size:10px;overflow-wrap:anywhere}.attribute .attr-top svg{width:16px;height:16px}.detail-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.detail-stats strong{overflow-wrap:anywhere;font-size:20px}}
+
+@media(min-width:701px){.portrait-bottom{bottom:48px}.portrait-action{position:relative;z-index:2}}
