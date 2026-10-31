@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "snapshot": {
+    "id": "setup-0042",
+    "release": "0042.1",
+    "phase": "Character preview",
+    "story_started": false,
+    "period": "Late 2078",
+    "location": "Night City",
+    "note": "Level-1 build prepared for review. The opening scene, contract and fragment installation have not been played."
+  },
+  "identity": {
+    "name": "Fen Vikutā",
+    "short_name": "Fen",
+    "age": 29,
+    "origin": "Japan-raised · Night City",
+    "background": "Corporate Researcher",
+    "class": "Contractor",
+    "source_class": "Warlock · 2014",
+    "architecture": "Combat Architecture",
+    "source_architecture": "The Fiend",
+    "provider": "Ronin",
+    "ancestry": "Standard human",
+    "art": "assets/character-art.jpg",
+    "bio": "An Arasaka researcher raised in Japan, born to a Japanese researcher and a Night City-born intelligence operative. Both parents were Saburo loyalists. Fen carries their legacy into a life stripped of corporate protection.",
+    "specialty": "Engram systems · Cognitive interfaces"
+  },
+  "build": {
+    "method": "27-point buy",
+    "points_spent": 27,
+    "human_bonus": "Standard human: +1 to all six attributes. No starting feat.",
+    "reason": "Broad scientific and technical competence, strong Cool, ordinary physical training. Combat Architecture supplies a limited survival margin appropriate to Ronin’s operational origin.",
+    "class_skills": [
+      "Investigation",
+      "History"
+    ],
+    "background_skills": [
+      "Science",
+      "Technology"
+    ],
+    "choices_status": "Designed under player delegation for review; no story actions enacted."
+  },
+  "attributes": [
+    {
+      "name": "Body",
+      "key": "BOD",
+      "base": 8,
+      "cost": 0,
+      "bonus": 1,
+      "score": 9,
+      "modifier": -1,
+      "description": "Force, lifting, Athletics and melee strength.",
+      "save_proficient": false
+    },
+    {
+      "name": "Reflexes",
+      "key": "REF",
+      "base": 11,
+      "cost": 3,
+      "bonus": 1,
+      "score": 12,
+      "modifier": 1,
+      "description": "Initiative, evasion, stealth and ranged weapon handling.",
+      "save_proficient": false
+    },
+    {
+      "name": "Constitution",
+      "key": "CON",
+      "base": 13,
+      "cost": 5,
+      "bonus": 1,
+      "score": 14,
+      "modifier": 2,
+      "description": "Physical resilience, HP and concentration.",
+      "save_proficient": false
+    },
+    {
+      "name": "Intelligence",
+      "key": "INT",
+      "base": 13,
+      "cost": 5,
+      "bonus": 1,
+      "score": 14,
+      "modifier": 2,
+      "description": "Research, intrusion, perception and investigation.",
+      "save_proficient": true
+    },
+    {
+      "name": "Technical Ability",
+      "key": "TECH",
+      "base": 13,
+      "cost": 5,
+      "bonus": 1,
+      "score": 14,
+      "modifier": 2,
+      "description": "Cybertech, medicine and hands-on engineering.",
+      "save_proficient": false
+    },
+    {
+      "name": "Cool",
+      "key": "COOL",
+      "base": 15,
+      "cost": 9,
+      "bonus": 1,
+      "score": 16,
+      "modifier": 3,
+      "description": "Program execution, composure, influence and mental resistance.",
+      "save_proficient": true
+    }
+  ],
+  "proficiencies": {
+    "bonus": 2,
+    "skills": [
+      "Investigation",
+      "History",
+      "Science",
+      "Technology"
+    ],
+    "saves": [
+      "INT",
+      "COOL"
+    ],
+    "tools": [
+      "Cybertech kit"
+    ],
+    "armour": [
+      "Light armour"
+    ],
+    "weapons": [
+      "Simple weapons",
+      "Simple firearms"
+    ],
+    "languages": [
+      "Japanese",
+      "Streetslang",
+      "English",
+      "Mandarin"
+    ],
+    "languages_note": "Japanese native; Streetslang; English from human language choice; Mandarin from researcher background. These grant no corporate credentials.",
+    "tools_note": "Cybertech proficiency is retained; no kit is currently supplied by the penniless opening."
+  },
+  "derived": {
+    "hp_max": 10,
+    "ac": 11,
+    "ac_basis": "Unarmoured: 10 + Reflexes (+1). Reference clothing grants no armour bonus.",
+    "initiative": 1,
+    "speed_ft": 30,
+    "program_attack": 5,
+    "program_dc": 13,
+    "hit_die": "d8",
+    "hit_dice_total": 1,
+    "concentration_save": 2,
+    "native_tolerance": 11,
+    "fragment_tolerance": 22,
+    "adaptation": 0,
+    "load": 0,
+    "passive_perception": 12,
+    "passive_sight": 7,
+    "passive_investigation": 14,
+    "carry_lb": 135,
+    "virtual_ac": 14
+  },
+  "resources": {
+    "hp_current": null,
+    "hp_note": "Opening postoperative assessment is pending; maximum HP is 10. No damage or healing has been enacted.",
+    "xp": 0,
+    "next_level_xp": 300,
+    "slot_max": 1,
+    "slot_tier": 1,
+    "slots_preview": 1,
+    "temporary_hp": 0,
+    "injuries_status": "Opening assessment pending",
+    "exhaustion_status": "Opening assessment pending",
+    "fragment_status": "Agreed benefit; installation occurs in play",
+    "rest_note": "One tier-1 slot returns after a short or long rest. Neither automatically restores HP."
+  },
+  "programs": [
+    {
+      "id": "short-circuit",
+      "name": "Short Circuit",
+      "original": "Eldritch Blast",
+      "tier": 0,
+      "channel": "D",
+      "action": "Action",
+      "range": "120 ft",
+      "duration": "Instantaneous",
+      "concentration": false,
+      "summary": "Overload exposed circuitry with a precise destructive packet.",
+      "effect": "Make one ranged program attack (+5) against a visible compatible powered target. On a hit, deal 1d10 system [force] damage. At total levels 5, 11 and 17, send 2, 3 and 4 packets respectively, each with its own attack and target. No Cool modifier is added to damage at level 1.",
+      "requirements": "A live route to compatible powered cyberware, an electronic actor/object or ICE. Bare organic flesh is not a target. Use ordinary AC/cover for embodied targets and virtual AC for ICE. Ordinary attack criticals and close-range disadvantage apply.",
+      "scaling": "Output Amplifier is a possible level-2 Firmware Upgrade, not currently installed.",
+      "icon": "bolt"
+    },
+    {
+      "id": "decoy-projection",
+      "name": "Decoy Projection",
+      "original": "Minor Illusion",
+      "tier": 0,
+      "channel": "P",
+      "action": "Action",
+      "range": "30 ft",
+      "duration": "1 minute",
+      "concentration": false,
+      "summary": "Forge an image or sound through nearby presentation hardware.",
+      "effect": "Create one sound, from a whisper to a scream, or a static object image within a 5-foot cube. An image adds no sound, smell, light or solidity. Physical interaction reveals an image. A creature examining it with an action can identify the deception with Intelligence (Investigation) DC 13. Ends on dismissal (action), replacement by another execution or after 1 minute.",
+      "requirements": "A reachable speaker for sound, or a suitable display/projector/compatible sensory interface for the image, plus actual access. The machinery must be able to cover the stated space. A camera cannot project; Fen does not own a free hologram emitter.",
+      "scaling": "Utility; no slot and no level-based increase.",
+      "icon": "eye"
+    },
+    {
+      "id": "vulnerability-tag",
+      "name": "Vulnerability Tag",
+      "original": "Hex",
+      "tier": 1,
+      "channel": "D",
+      "action": "Bonus action",
+      "range": "90 ft",
+      "duration": "1 hour",
+      "concentration": true,
+      "summary": "Mark a neural weakness and exploit it with each successful attack.",
+      "effect": "Choose a visible reachable neural or robotic target; no initial save. Your attacks against it deal an extra 1d6 tissue [necrotic] neural/integrity damage on a hit. Choose one ability: its checks have disadvantage, not its saving throws. After it reaches 0 HP, transfer the tag to another legal target with a bonus action on a subsequent turn.",
+      "requirements": "Compatible reachable neural or robotic hardware and a valid route/session. Cannot tag an offline unaugmented person. Normal intrusion and Trace rules apply. A lost route ends a remotely controlled effect at turn end.",
+      "scaling": "Tier 3–4: up to 8 hours. Tier 5+: up to 24 hours. Tier 2: still 1 hour. Firmware clearance can end it.",
+      "icon": "target"
+    },
+    {
+      "id": "priority-command",
+      "name": "Priority Command",
+      "original": "Command",
+      "tier": 1,
+      "channel": "D",
+      "action": "Action",
+      "range": "60 ft",
+      "duration": "1 round",
+      "concentration": false,
+      "summary": "Transmit a brief overriding instruction through a neural endpoint.",
+      "effect": "A visible compatible target makes a Cool save, DC 13. On failure it follows a one-word instruction on its next turn. Approach: moves toward you and ends its turn within 5 feet. Drop: drops what it holds and ends its turn. Flee: uses the fastest available means to move away. Grovel: falls prone and ends its turn. Halt: takes no movement or actions (a flying target moves only if necessary to stay aloft). A directly harmful or uninterpretable instruction fails. Other instructions require adjudication.",
+      "requirements": "An exposed compatible neural or actuator interface, a live session and an instruction it can interpret. No spoken component. Available through Combat Architecture’s expanded list; selected as one of the two known programs.",
+      "scaling": "One additional target per slot tier above 1; targets must be within 30 feet of one another.",
+      "icon": "command"
+    }
+  ],
+  "features": [
+    {
+      "id": "burst-processing",
+      "name": "Burst Processing",
+      "original": "Pact Magic",
+      "summary": "2 utilities · 2 tier-1 programs · 1 execution slot",
+      "detail": "Cool is your program ability. Attack +5; save DC 13. Known software is fixed between levels. One tier-1 slot returns on a short or long rest. Utilities consume no slot. One concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. After a bonus-action program, other programs on that turn may only be action utilities. All programs need their real equipment and access."
+    },
+    {
+      "id": "kill-confirmation",
+      "name": "Kill Confirmation",
+      "original": "Dark One’s Blessing",
+      "summary": "Gain 4 temporary HP when you reduce a hostile creature to 0 HP",
+      "detail": "Combat Architecture, level 1. When you reduce a genuine hostile creature to 0 HP, gain temporary HP equal to Contractor level + Cool modifier (1 + 3 = 4). Temporary HP do not stack; choose the old or new amount. They are a protective margin from combat-feedback regulation, not tissue repair, and cannot revive you. No farming helpless manufactured targets."
+    },
+    {
+      "id": "research-network",
+      "name": "Research Network",
+      "original": "Corporate Researcher",
+      "summary": "Find the likely archive, department or specialist for a technical question",
+      "detail": "You know how to identify the likely department or archive for a technical question and how to request access. Credentials, trust, time and actual access still matter. Former employment does not restore revoked permissions."
+    },
+    {
+      "id": "fragment",
+      "name": "Ronin Fragment",
+      "original": "Campaign exception",
+      "summary": "Native tolerance 11 → enhanced tolerance 22",
+      "detail": "While slotted and operating, tolerance is twice native tolerance plus earned adaptation. Native = max(4, 6 + permanent Constitution modifier + permanent Cool modifier) = 11. Enhanced = 22; earned adaptation currently 0. Runs locally without a continuous patron connection. Normal installation shock, trauma, treatment and overload rules remain. Disabling/removal recalculates overload, not an instant episode. This preview does not enact the contract or installation."
+    }
+  ],
+  "cyberware": [
+    {
+      "id": "eyes",
+      "name": "Sponsored Cybereyes",
+      "model": "Refurbished matched pair",
+      "site": "Ocular system",
+      "grade": "Budget · ordinary replacement",
+      "load": 0,
+      "status": "Opening loadout",
+      "summary": "Normal vision with a restricted, advertising-heavy display",
+      "detail": "Cyan iris shells, a Chyron HUD and two empty option slots per eye. Disadvantage on sight-based Perception until replaced; hearing-only Perception is unaffected. Sight-based passive Perception 7; other senses 12. No attack, AC or saving throw penalty, blindness or obscuration. No enhanced night vision or targeting modules.",
+      "icon": "eye"
+    },
+    {
+      "id": "neuroport",
+      "name": "Rocklin Augmentics NP-1",
+      "model": "Refurbished standard Neuroport",
+      "site": "Neural interface",
+      "grade": "Standard · ordinary interface",
+      "load": 0,
+      "status": "Opening loadout",
+      "summary": "Biomonitor, holophone, HUD, personal link and shard interface",
+      "detail": "Includes Neural Link, virtuality, two shard sockets and support for five neuralware options. Those physical option slots do not increase Load tolerance. Controller sits behind the right ear. NP-1 is our campaign model designation. No premium enhancement or free intrusion bypass. When Ronin’s runtime is installed it uses one shard socket.",
+      "icon": "chip"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "clothes",
+      "name": "Clothing",
+      "status": "Opening details pending",
+      "location": "On you",
+      "summary": "The supplied artwork is the appearance reference; opening outfit condition is not yet enacted.",
+      "detail": "No armour, weapon, cash, tool kit, ammunition or consumable is granted by the illustration. The penniless opening overrides the ordinary Contractor equipment package.",
+      "icon": "pack"
+    },
+    {
+      "id": "shard",
+      "name": "Ronin runtime shard",
+      "status": "Expected · not yet received",
+      "location": "Not on you",
+      "summary": "Bounded class runtime, delivered during the opening conversation",
+      "detail": "One physical shard, not a full personality construct. Consent and insertion remain your actions in the opening. The level-1 program loadout shown here previews its class capabilities.",
+      "icon": "chip"
+    }
+  ],
+  "finances": {
+    "cash": 0,
+    "bank": "Frozen",
+    "housing": "Revoked",
+    "trauma_team": "Cancelled",
+    "debt": "None established"
+  },
+  "journal": [
+    {
+      "id": "opening",
+      "type": "Campaign",
+      "date": "Late 2078",
+      "title": "A new life, off the corporate ledger",
+      "body": "Night City is the starting point. The story has not begun. This companion previews Fen’s level-1 build and agreed opening equipment; the first conversation with Ronin will happen in play."
+    },
+    {
+      "id": "identity",
+      "type": "Background",
+      "date": "Before the opening",
+      "title": "Fen Vikutā",
+      "body": "Japan-raised, 29, an Arasaka researcher by trade. Engram modelling, cognitive systems and lab software were familiar ground. Field operations were not. Fen introduces himself surname first; most non-native Japanese speakers call him Fen."
+    }
+  ],
+  "rules": {
+    "rests": "Short rest: 1 hour, restores Contractor slots. Long rest: 8 hours under the normal 2014 rules, restores class resources and half total Hit Dice (minimum 1), but no automatic HP.",
+    "convalescence": "Once per 24 hours, after 8 hours of rest with food, water and appropriate first aid, spend up to one quarter of total Hit Dice rounded up (half in a stocked clinic). At level 1 this is one d8 + 2, minimum 0 HP. Critical injuries must be treated first.",
+    "injuries": "The first damaging drop from positive HP to 0 in an encounter causes one critical injury. A critical hit above 0 does not. Standard injuries require treatment and 7 qualifying convalescence days; major injuries associated with a failed death save require surgery and 21 days.",
+    "intrusion": "Establish a real route and discover a compatible endpoint. Technology +4 is your intrusion check. Fast intrusion may be included in a hostile direct program’s action: failed breach spends the action, not the slot; success then resolves the program normally. Ordinary local discovery is 60 feet; an already known endpoint can use the program’s range through an available route.",
+    "capacity": "Load may exceed tolerance, with overload risks. The fragment doubles native tolerance; it does not remove installation shock or the need for treatment. Baseline replacements and class apparatus are Load 0.",
+    "progression": "Level 2 at 300 total XP: two tier-1 slots, three known programs and two Firmware Upgrades. Level 3: Interface Platform. No level-2 or level-3 features are active yet."
+  },
+  "sources": [
+    {
+      "label": "Official Cyberpunk build planner",
+      "url": "https://www.cyberpunk.net/en/build-planner"
+    },
+    {
+      "label": "Cyberpunk interface reference",
+      "url": "https://cyberpunk.puredmg.com/gameinfo/interface/"
+    },
+    {
+      "label": "Safari installation guide",
+      "url": "https://support.apple.com/en-ie/guide/iphone/iphea86e5236/27/ios/27"
+    }
+  ]
+}
