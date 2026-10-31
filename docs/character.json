@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0043",
-    "release": "0043.1",
+    "id": "setup-0044",
+    "release": "0044.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -158,16 +158,16 @@
     "virtual_ac": 14
   },
   "resources": {
-    "hp_current": null,
-    "hp_note": "Current HP, injuries and exhaustion: unassessed.",
+    "hp_current": 10,
+    "hp_note": "Full health. Superficial cuts and bruises; no critical injuries or physical impairment.",
     "xp": 0,
     "next_level_xp": 300,
     "slot_max": 1,
     "slot_tier": 1,
     "slots_preview": 1,
     "temporary_hp": 0,
-    "injuries_status": "Opening assessment pending",
-    "exhaustion_status": "Opening assessment pending",
+    "injuries_status": "None",
+    "exhaustion_status": "None",
     "fragment_status": "Not installed",
     "rest_note": "One tier-1 slot returns after a short or long rest. Neither automatically restores HP."
   },
