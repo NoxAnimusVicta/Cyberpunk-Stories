@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0045",
-    "release": "0045.1",
+    "id": "setup-0046",
+    "release": "0046.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -289,18 +289,54 @@
       "load": 0,
       "status": "Opening loadout",
       "summary": "Exposed ear-mounted controller; basic interface functions only",
-      "detail": "Decades-old Rocklin hardware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two exposed adapter sockets accept shards; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. Easily noticed when uncovered and vulnerable to snagging, grabbing or direct damage. No deep-dive capability. Retains a biomonitor, basic holophone/HUD, neural link, virtuality display and five empty neuralware option connections. Ronin’s runtime occupies one shard socket when installed.",
+      "detail": "Decades-old Rocklin cyberware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two exposed adapter sockets accept shards; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. When the distinctive casing is visible, observers have advantage on Perception checks to recognise or identify Fen using it as an identifying feature. Concealing it beneath his hair removes that visual cue. No Stealth penalty. Exposed connections are vulnerable to snagging, grabbing or direct damage. No deep-dive capability. Retains a biomonitor, basic holophone/HUD, neural link, virtuality display and five empty neuralware option connections. Ronin’s runtime occupies one shard socket when installed.",
       "icon": "chip"
     }
   ],
   "inventory": [
     {
       "id": "clothes",
-      "name": "Clothing",
+      "name": "Arasaka long coat",
       "status": "Worn",
       "location": "On you",
-      "summary": "Personal clothing",
-      "detail": "Unarmoured clothing.",
+      "summary": "Black tailored coat · red lining and chest emblem",
+      "detail": "A calf-length black coat with structured shoulders, a high collar and red edging. Red lining shows through the split hem; the red Arasaka emblem sits on the left chest. Scuffed and dirty from the escape and rough handling. The pockets have been emptied. Clothing, not armour.",
+      "icon": "pack"
+    },
+    {
+      "id": "shirt",
+      "name": "High-neck shirt",
+      "status": "Worn",
+      "location": "On you",
+      "summary": "Fitted black shirt · narrow red collar trim",
+      "detail": "A close-fitting black shirt with a high neck and a narrow red accent at the collar. Worn beneath the coat; no protective plating.",
+      "icon": "pack"
+    },
+    {
+      "id": "trousers",
+      "name": "Trousers & belt",
+      "status": "Worn",
+      "location": "On you",
+      "summary": "Tapered black trousers · red hip straps",
+      "detail": "Black trousers taper into the boots. A black belt with a rectangular metal buckle sits at the waist, with red straps hanging at the hips and upper thighs. Pockets empty.",
+      "icon": "pack"
+    },
+    {
+      "id": "gloves",
+      "name": "Panelled gloves",
+      "status": "Worn",
+      "location": "On you",
+      "summary": "Black full-finger gloves · red back panels",
+      "detail": "Black full-finger gloves with red panels across the backs and fastening straps at the wrists. Ordinary clothing, without built-in weapons or cyberware.",
+      "icon": "pack"
+    },
+    {
+      "id": "boots",
+      "name": "Buckled boots",
+      "status": "Worn",
+      "location": "On you",
+      "summary": "Tall black boots · red toes, soles and side panels",
+      "detail": "Mid-calf black boots with red toe, sole and side detailing, secured by multiple dark buckle straps. Scuffed from the flight through the facility and streets.",
       "icon": "pack"
     }
   ],
