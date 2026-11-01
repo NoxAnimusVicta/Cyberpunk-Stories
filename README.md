@@ -1,7 +1,33 @@
-# Cyberpunk Stories campaign references
+# RONIN — Cyberpunk Stories
 
-An unofficial personal Cyberpunk campaign. Setup is in progress; no companion app has been published.
+[Open the companion](https://noxanimusvicta.github.io/Cyberpunk-Stories/)
 
-The working timeline, economic reference, character records and exact transcripts are private narrator material. Public material is restricted to this introduction, a spoiler-safe source directory and repository exclusions. Future prices and events are not player handouts.
+A personal, unofficial Cyberpunk story companion for Fen Vikutā, using a campaign conversion of the 2014 fifth-edition rules.
 
-Original campaign material is not official Cyberpunk canon. Sourcebooks and artwork are not redistributed here. No hosting destination has been selected.
+## Companion
+
+- **Character:** current attributes, health, XP, resources, skills and the complete Contractor [Warlock] class reference.
+- **Programs:** selected software, original spell names, targeting requirements, costs and effects.
+- **Cyberware:** installed devices, their functions and current Neural Tolerance.
+- **Inventory:** owned equipment, ammunition, supplies, locations and available money.
+- **Journal:** player-known story entries and reference rules.
+
+Current character snapshot: **18 November 2078, 09:00 — Sunset Motel, Room 12**, following the first Long Rest. App release **0103.1**; enacted scene **0102**. The story clock changes with play, not real-world time. The app is a maintained reference; it does not advance the story or make character choices.
+
+On iPhone, open the companion in Safari and use **Share → Add to Home Screen**. Internet access is required. Export Sheet downloads the same player-facing record displayed by the app. Reload an already-open companion to receive this update.
+
+## Rules and sources
+
+The public class reference contains Contractor progression, features, three Architectures, Firmware Upgrades, Interface Platforms, eligible Programs, chassis, feats, execution and recovery rules. Expanded Program lists supply learning choices, not automatically known software. Later-level choices are references rather than acquired abilities.
+
+The full twelve-class, forty-subclass conversion and wider armoury are maintained locally. The public repository does not distribute the sourcebooks or the complete narrator library. Magazine capacities follow the specific model and edition; campaign attack and damage values are converted rules. Homebrew mechanics have been checked for source and internal consistency, but are not certified encounter balance.
+
+See [SOURCES.md](SOURCES.md) for sources and credits.
+
+## Repository and publication
+
+GitHub Pages serves the static app from **main / docs**. All asset URLs are relative to the project path. There is no service worker, browser-only character save, account system or analytics. The local campaign owns the current state; `docs/character.json` is its approved public projection, and `docs/class-reference.json` is the approved class reference.
+
+Updates are prepared and checked locally, restricted to the publication allowlist, then verified against the repository and live site. Private transcripts, full character owners, NPC profiles, hidden Stability, economics and future timelines stay local. Hiding content in the interface is not a privacy boundary.
+
+Cyberpunk and Dungeons & Dragons belong to their respective owners. This fan campaign is not an official product.
