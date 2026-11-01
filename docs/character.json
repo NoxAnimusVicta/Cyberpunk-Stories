@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0065",
-    "release": "0065.1",
-    "phase": "Character preview",
-    "story_started": false,
+    "id": "scene-0080",
+    "release": "0080.1",
+    "phase": "Roadside awakening",
+    "story_started": true,
     "period": "Late 2078",
-    "location": "Night City"
+    "location": "Badlands · Roadside carpark"
   },
   "identity": {
     "name": "Fen Vikutā",
@@ -168,7 +168,9 @@
     "temporary_hp": 0,
     "injuries_status": "None",
     "exhaustion_status": "None",
-    "rest_note": "One tier-1 slot returns after a Short Rest or Long Rest. Neither automatically restores HP."
+    "rest_note": "One tier-1 slot returns after a Short Rest or Long Rest. Neither automatically restores HP.",
+    "software_online": false,
+    "slots_current": 1
   },
   "programs": [
     {
@@ -267,7 +269,7 @@
       "site": "Ocular system",
       "grade": "Budget · ordinary replacement",
       "load": 0,
-      "status": "Opening loadout",
+      "status": "Installed",
       "summary": "Cyan iris shells · Chyron HUD · two empty option slots per eye",
       "detail": "Cyclops International Civic C2 replacement eyes, a second-hand matched pair fitted by Maelstrom. Human-shaped housings with cyan iris shells provide ordinary vision and a built-in Chyron HUD. Each eye has two empty optical option slots. Persistent advertising crowds the display, imposing disadvantage on sight-based Perception until replacement. Passive Perception: sight 7; other senses 12.",
       "icon": "eye",
@@ -281,7 +283,7 @@
       "site": "Neural interface",
       "grade": "Bargain-bin · obsolete external assembly",
       "load": 0,
-      "status": "Opening loadout",
+      "status": "Installed",
       "summary": "Exposed ear-mounted controller; basic interface functions only",
       "detail": "Decades-old Rocklin cyberware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two empty exposed adapter sockets accept shards; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. When the distinctive casing is visible, observers have advantage on Perception checks to recognise or identify Fen using it as an identifying feature. Concealing it beneath his hair removes that visual cue. Exposed connections are vulnerable to snagging, grabbing or direct damage. Retains a biomonitor, basic holophone/HUD, neural link, virtuality display and five empty neuralware option connections.",
       "icon": "chip",
@@ -314,6 +316,13 @@
       "date": "2078",
       "title": "Fen Vikutā",
       "body": "Raised in Japan. Former Arasaka researcher specialising in engram modelling, cognitive systems and laboratory software."
+    },
+    {
+      "id": "scene-0080",
+      "type": "Story",
+      "date": "18 / 11 / 2078",
+      "title": "Roadside",
+      "body": "After the raid, blindness and a Maelstrom abduction, Fen wakes in a roadside carpark. His vision has returned through unfamiliar, advert-cluttered optics. A public telephone is ringing."
     }
   ],
   "rules": {
@@ -342,13 +351,13 @@
   "clock": {
     "calendar": "Gregorian",
     "year": 2078,
-    "month": null,
-    "day": null,
-    "hour": null,
-    "minute": null,
+    "month": 11,
+    "day": 18,
+    "hour": 0,
+    "minute": 0,
     "period": "Late 2078",
-    "location": "Night City",
+    "location": "Badlands · Roadside carpark",
     "time_basis": "Local time",
-    "event_id": null
+    "event_id": "scene-0080"
   }
 }
