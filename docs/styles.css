@@ -29,7 +29,7 @@
 
 /* Keyboard focus stays visible; pointer/touch focus does not draw a box. */
 button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
-.hardware-tile[data-chrome="fragment"]{grid-column:1/-1}.hardware-art.fragment{background-image:url("./assets/ronin-fragment-0106.webp");background-size:contain;background-position:center;aspect-ratio:2/1}
+.hardware-tile[data-chrome="fragment"]{grid-column:1/-1}.hardware-art.fragment{background-image:url("./assets/ronin-fragment-0106.webp?v=0120");background-size:contain;background-position:center;aspect-ratio:2/1}
 
 /* Class reference: dense rules remain behind deliberate disclosures. */
 .class-reference-entry{margin-top:24px}

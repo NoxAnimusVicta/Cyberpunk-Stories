@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot": {
     "id": "scene-0102",
-    "release": "0119.1",
+    "release": "0120.1",
     "phase": "Morning after Long Rest",
     "story_started": true,
     "period": "Late 2078",
@@ -303,7 +303,7 @@
     {
       "id": "fragment",
       "name": "Ronin Fragment",
-      "model": "Custom shard-format Cyberdeck",
+      "model": "Arasaka Shadow · Ronin Fragment installed",
       "site": "Cyberdeck",
       "grade": "Class Apparatus",
       "load": 0,
@@ -311,8 +311,8 @@
       "acquired": true,
       "installed": true,
       "icon": "chip",
-      "summary": "Removable Cyberdeck running Ronin’s local Fragment",
-      "detail": "A custom Cyberdeck in a removable shard housing, running Ronin’s bounded local Fragment through the NP-1 neural interface. Occupies one shard socket while slotted. While operating, doubles native Neural Tolerance before earned Adaptation and lasting Tolerance Injury: 11 → 22, and grants +1 to Contractor Program attack rolls and Program Save DC, including Utilities: Attack +6, DC 14 at current attributes. Supplies the Contractor interface locally; these passive benefits require no extra charge or Execution Slot. Removal ends these bonuses; recalculate Tolerance, Overload and the Stability ceiling under the normal rules.",
+      "summary": "Arasaka Shadow Cyberdeck running Ronin’s local Fragment",
+      "detail": "An Arasaka Shadow Cyberdeck loaded with Ronin’s bounded local Fragment, connected through the NP-1 neural interface. Slim black casing, translucent red circuitry cover and white Arasaka markings. Occupies one shard socket while slotted. While operating, doubles native Neural Tolerance before earned Adaptation and lasting Tolerance Injury: 11 → 22, and grants +1 to Contractor Program attack rolls and Program Save DC, including Utilities: Attack +6, DC 14 at current attributes. Supplies the Contractor interface locally; these passive benefits require no extra charge or Execution Slot. Removal ends these bonuses; recalculate Tolerance, Overload and the Stability ceiling under the normal rules.",
       "condition": "Local Runtime",
       "display_grade": "CLASS APPARATUS"
     }
