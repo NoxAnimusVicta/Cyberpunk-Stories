@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0060",
-    "release": "0060.1",
+    "id": "setup-0065",
+    "release": "0065.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -218,6 +218,22 @@
       "requirements": "Wirelessly target integrated neural Cyberware or a robotic system within range. Software mode targets a reachable ICE instance. Maintain Concentration for the printed duration.",
       "scaling": "Tier 3–4: up to 8 hours. Tier 5+: up to 24 hours. Tier 2: still 1 hour. Firmware clearance can end it.",
       "icon": "target"
+    },
+    {
+      "id": "neural-seizure",
+      "name": "Neural Seizure",
+      "original": "Hideous Laughter",
+      "tier": 1,
+      "channel": "D",
+      "action": "Action",
+      "range": "30 ft",
+      "duration": "Up to 1 minute",
+      "concentration": true,
+      "summary": "Disrupt neural and motor control, dropping a target into incapacitating spasms.",
+      "effect": "Choose one visible compatible target within range with Intelligence 5 or higher. It makes a Cool Saving Throw against DC 13. On failure, it falls Prone and is Incapacitated and unable to stand for the duration. At the end of each of its turns and whenever it takes damage, it repeats the save, with advantage if damage triggered that save. A success ends the Program. Incapacitated creatures cannot take Actions or Reactions, including Bonus Actions, and lose Concentration.",
+      "requirements": "Wireless upload to compatible neural or motor-control Cyberware within range; no preliminary breach check. Spend one Execution Slot and maintain Concentration.",
+      "scaling": "No higher-tier improvement.",
+      "icon": "chip"
     }
   ],
   "features": [
@@ -225,7 +241,7 @@
       "id": "burst-processing",
       "name": "Burst Processing",
       "original": "Pact Magic",
-      "summary": "2 Utilities · 1 of 2 Programs chosen · 1 Execution Slot",
+      "summary": "2 Utilities · 2 Programs · 1 Execution Slot",
       "detail": "Cool is your program ability. Attack +5; save DC 13. Known software is fixed between levels. One tier-1 slot returns on a Short Rest or Long Rest. Utilities consume no slot. One Concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. After a Bonus Action program, other programs on that turn may only be action utilities. All programs need their real equipment and access."
     },
     {
