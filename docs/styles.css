@@ -72,6 +72,22 @@ html[data-input="pointer"] :focus{outline:none}
 *,*::before,*::after{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 
 /* Current inventory locations and long room names must fit small screens. */
+.rules-copy,.reference-copy,.reference-page{max-width:74ch}
+.rules-copy p,.reference-copy p{margin:0 0 14px}
+.rule-section{margin:22px 0}
+.rule-section:last-child{margin-bottom:0}
+.hardware-details .rules-copy{font-size:17px;line-height:1.65;color:#d6c3cb;margin-top:20px}
+.hardware-details .rule-section h3{font-size:13px;line-height:1.4;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin:0 0 8px;font-weight:600}
+#detail-content .rules-copy h3{margin:0 0 8px}
+#detail-content .rule-section{padding-left:14px;border-left:2px solid var(--line)}
+.rule-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0 24px;padding:14px 0;border-block:1px solid var(--line)}
+.rule-facts>div{min-width:0}
+.rule-facts dt{color:var(--muted);font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.rule-facts dd{margin:5px 0 0;color:var(--cyan);font-size:17px;line-height:1.45}
+.reference-copy h4{padding-top:12px;border-top:1px solid var(--line)}
+.reference-copy li+li{margin-top:9px}
+.reference-table .detail-table td:last-child{text-align:left;color:var(--text)}
+@media(max-width:600px){.rule-facts{grid-template-columns:1fr;gap:12px}.rule-facts>div{display:grid;grid-template-columns:85px minmax(0,1fr);gap:10px}.rule-facts dd{margin:0}.detail-stats{grid-template-columns:1fr}.detail-stats>div{display:flex;align-items:baseline;justify-content:space-between;gap:16px}.detail-stats strong{text-align:right;overflow-wrap:normal;font-size:20px}.hardware-details .rules-copy{font-size:16px}}
 .world-stamp{min-width:0;max-width:52%;overflow-wrap:anywhere}
 .inventory-group{margin-top:24px}.inventory-group .record-side{white-space:normal;max-width:32%}
 .current-scene{margin-bottom:24px}.current-scene p{margin-bottom:0}
