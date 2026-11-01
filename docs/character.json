@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0057",
-    "release": "0057.1",
+    "id": "setup-0059",
+    "release": "0059.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -16,8 +16,8 @@
     "background": "Corporate Researcher",
     "class": "Contractor",
     "source_class": "Warlock · 2014",
-    "architecture": "Combat Architecture",
-    "source_architecture": "The Fiend",
+    "architecture": null,
+    "source_architecture": null,
     "provider": "Ronin",
     "ancestry": "Standard human",
     "art": "assets/character-art.jpg",
@@ -218,22 +218,6 @@
       "requirements": "Wirelessly target integrated neural Cyberware or a robotic system within range. Software mode targets a reachable ICE instance. Maintain Concentration for the printed duration.",
       "scaling": "Tier 3–4: up to 8 hours. Tier 5+: up to 24 hours. Tier 2: still 1 hour. Firmware clearance can end it.",
       "icon": "target"
-    },
-    {
-      "id": "priority-command",
-      "name": "Priority Command",
-      "original": "Command",
-      "tier": 1,
-      "channel": "D",
-      "action": "Action",
-      "range": "60 ft",
-      "duration": "1 round",
-      "concentration": false,
-      "summary": "Transmit a brief overriding instruction through a neural endpoint.",
-      "effect": "A visible compatible target makes a Cool save, DC 13. On failure it follows a one-word instruction on its next turn. Approach: moves toward you and ends its turn within 5 feet. Drop: drops what it holds and ends its turn. Flee: uses the fastest available means to move away. Grovel: falls prone and ends its turn. Halt: takes no movement or actions (a flying target moves only if necessary to stay aloft). A directly harmful or uninterpretable instruction fails. Other instructions require adjudication.",
-      "requirements": "Wirelessly target compatible neural Cyberware or a robotic controller within range and transmit an instruction it can interpret.",
-      "scaling": "One additional target per slot tier above 1; targets must be within 30 feet of one another.",
-      "icon": "command"
     }
   ],
   "features": [
@@ -241,15 +225,8 @@
       "id": "burst-processing",
       "name": "Burst Processing",
       "original": "Pact Magic",
-      "summary": "2 utilities · 2 tier-1 programs · 1 Execution Slot",
+      "summary": "2 Utilities · 1 of 2 Programs chosen · 1 Execution Slot",
       "detail": "Cool is your program ability. Attack +5; save DC 13. Known software is fixed between levels. One tier-1 slot returns on a Short Rest or Long Rest. Utilities consume no slot. One Concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. After a Bonus Action program, other programs on that turn may only be action utilities. All programs need their real equipment and access."
-    },
-    {
-      "id": "kill-confirmation",
-      "name": "Kill Confirmation",
-      "original": "Dark One’s Blessing",
-      "summary": "Gain 4 temporary HP when you reduce a hostile creature to 0 HP",
-      "detail": "Combat Architecture, level 1. When you reduce a genuine hostile creature to 0 HP, gain temporary HP equal to Contractor level + Cool modifier (1 + 3 = 4). Temporary HP do not stack; choose the old or new amount. They are a protective margin from combat-feedback regulation, not tissue repair, and cannot revive you. No farming helpless manufactured targets."
     },
     {
       "id": "research-network",
