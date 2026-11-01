@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot": {
     "id": "scene-0102",
-    "release": "0118.1",
+    "release": "0119.1",
     "phase": "Morning after Long Rest",
     "story_started": true,
     "period": "Late 2078",
@@ -303,16 +303,16 @@
     {
       "id": "fragment",
       "name": "Ronin Fragment",
-      "model": "Removable runtime shard",
-      "site": "Shard Socket",
+      "model": "Custom shard-format Cyberdeck",
+      "site": "Cyberdeck",
       "grade": "Class Apparatus",
       "load": 0,
       "status": "Installed · Operating",
       "acquired": true,
       "installed": true,
       "icon": "chip",
-      "summary": "Bounded local runtime on a physical shard",
-      "detail": "Occupies one shard socket while slotted. While operating, doubles native Neural Tolerance before earned Adaptation and lasting Tolerance Injury: 11 → 22, and grants +1 to Contractor Program attack rolls and Program Save DC, including Utilities: Attack +6, DC 14 at current attributes. Supplies the Contractor interface locally; these passive benefits require no extra charge or Execution Slot. Removal ends these bonuses; recalculate Tolerance, Overload and the Stability ceiling under the normal rules.",
+      "summary": "Removable Cyberdeck running Ronin’s local Fragment",
+      "detail": "A custom Cyberdeck in a removable shard housing, running Ronin’s bounded local Fragment through the NP-1 neural interface. Occupies one shard socket while slotted. While operating, doubles native Neural Tolerance before earned Adaptation and lasting Tolerance Injury: 11 → 22, and grants +1 to Contractor Program attack rolls and Program Save DC, including Utilities: Attack +6, DC 14 at current attributes. Supplies the Contractor interface locally; these passive benefits require no extra charge or Execution Slot. Removal ends these bonuses; recalculate Tolerance, Overload and the Stability ceiling under the normal rules.",
       "condition": "Local Runtime",
       "display_grade": "CLASS APPARATUS"
     }
