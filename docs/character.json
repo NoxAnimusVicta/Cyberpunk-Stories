@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "setup-0059",
-    "release": "0059.1",
+    "id": "setup-0060",
+    "release": "0060.1",
     "phase": "Character preview",
     "story_started": false,
     "period": "Late 2078",
@@ -16,8 +16,8 @@
     "background": "Corporate Researcher",
     "class": "Contractor",
     "source_class": "Warlock · 2014",
-    "architecture": null,
-    "source_architecture": null,
+    "architecture": "Intrusion Architecture",
+    "source_architecture": "Great Old One",
     "provider": "Ronin",
     "ancestry": "Standard human",
     "art": "assets/character-art.jpg",
@@ -227,6 +227,13 @@
       "original": "Pact Magic",
       "summary": "2 Utilities · 1 of 2 Programs chosen · 1 Execution Slot",
       "detail": "Cool is your program ability. Attack +5; save DC 13. Known software is fixed between levels. One tier-1 slot returns on a Short Rest or Long Rest. Utilities consume no slot. One Concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. After a Bonus Action program, other programs on that turn may only be action utilities. All programs need their real equipment and access."
+    },
+    {
+      "id": "semantic-link",
+      "name": "Semantic Link",
+      "original": "Awakened Mind",
+      "summary": "Silent translated messages · 30 ft · At Will",
+      "detail": "Send one-way messages wirelessly to a visible recipient through compatible neural Cyberware or a communication endpoint within 30 feet. The recipient must understand at least one language; you do not need to share it. No Execution Slot is spent. The link carries your message, not the recipient’s thoughts."
     },
     {
       "id": "research-network",
