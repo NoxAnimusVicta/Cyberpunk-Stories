@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot": {
     "id": "scene-0080",
-    "release": "0080.1",
+    "release": "0082.1",
     "phase": "Roadside awakening",
     "story_started": true,
     "period": "Late 2078",
@@ -168,7 +168,7 @@
     "temporary_hp": 0,
     "injuries_status": "None",
     "exhaustion_status": "None",
-    "rest_note": "One tier-1 slot returns after a Short Rest or Long Rest. Neither automatically restores HP.",
+    "rest_note": "One Tier-1 Execution Slot returns after a Short Rest or Long Rest. A qualifying Long Rest with food and water restores 2 HP.",
     "software_online": false,
     "slots_current": 1
   },
@@ -326,8 +326,8 @@
     }
   ],
   "rules": {
-    "rests": "Short Rest: 1 hour, restores Contractor slots. Long Rest: 8 hours under the normal 2014 rules, restores class resources and half total Hit Dice (minimum 1), but no automatic HP.",
-    "convalescence": "Once per 24 hours, after 8 hours of rest with food, water and appropriate first aid, spend up to one quarter of total Hit Dice rounded up (half in a stocked clinic). At level 1 this is one d8 + 2, minimum 0 HP. Critical injuries must be treated first.",
+    "rests": "Short Rest: 1 hour, restores Contractor slots. Long Rest: 8 hours under the normal 2014 requirements, once per 24 hours; begin with at least 1 HP. Restores class resources and half total Hit Dice (minimum 1). With adequate food and water, also restores Constitution modifier HP, minimum 1: currently 2 HP, up to your current maximum. Injury-specific HP recovery restrictions still apply.",
+    "convalescence": "Once per 24 hours, after 8 hours of rest with food, water and appropriate first aid, spend up to one quarter of total Hit Dice rounded up (half in a stocked clinic). At level 1 this is one d8 + 2, minimum 0 HP. Critical injuries must be treated first. This is additional to natural Long Rest recovery; the same eight hours can qualify for both. HP recovery leaves injury penalties and recovery clocks intact.",
     "injuries": "The first damaging drop from positive HP to 0 in an encounter causes one critical injury. A critical hit above 0 does not. Standard injuries require treatment and 7 qualifying convalescence days; major injuries associated with a failed death save require surgery and 21 days.",
     "intrusion": "Quickhacks upload wirelessly within their printed range. Target identification and upload are part of execution; resolve the Program’s attack or Saving Throw. Utilities are at will; tiered Programs spend an Execution Slot. Effects need a physical source: powered Cyberware for an overload, fuel and ignition for a combustion blast, or a chemical payload for toxins.",
     "capacity": "Native Neural Tolerance = max(4, 6 + Constitution modifier + Cool modifier) = 11. Add earned Adaptation, currently 0. Current Load: 0. Load above tolerance creates overload risk. Baseline replacements are Load 0.",
