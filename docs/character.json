@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot": {
     "id": "scene-0102",
-    "release": "0103.1",
+    "release": "0118.1",
     "phase": "Morning after Long Rest",
     "story_started": true,
     "period": "Late 2078",
@@ -254,7 +254,7 @@
       "name": "Burst Processing",
       "original": "Pact Magic",
       "summary": "2 Utilities · 2 Programs · 1 Execution Slot",
-      "detail": "Cool is your program ability. Attack +6; save DC 14. Known software is fixed between levels. One tier-1 slot returns on a Short Rest or Long Rest. Utilities consume no slot. One Concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. After a Bonus Action program, other programs on that turn may only be action utilities. All programs need their real equipment and access."
+      "detail": "Cool is your program ability. Attack +6; save DC 14. Known software is fixed between levels. One tier-1 slot returns on a Short Rest or Long Rest. Utilities consume no slot. One Concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. If you execute a Bonus Action Program, every other Program on that turn must be a Utility with an execution time of one Action. This restriction applies in either order. All programs need their real equipment and access."
     },
     {
       "id": "semantic-link",
@@ -281,7 +281,7 @@
       "load": 0,
       "status": "Installed",
       "summary": "Cyan iris shells · Chyron HUD · two empty option slots per eye",
-      "detail": "Cyclops International Civic C2 replacement eyes, a second-hand matched pair fitted by Maelstrom. Human-shaped housings with cyan iris shells provide ordinary vision and a built-in Chyron HUD. Each eye has two empty optical option slots. Persistent advertising crowds the display, imposing disadvantage on sight-based Perception until replacement. Passive Perception: sight 7; other senses 12.",
+      "detail": "Cyclops International Civic C2 replacement eyes, a second-hand matched pair fitted by Maelstrom. Human-shaped housings with cyan iris shells provide ordinary vision and a built-in Chyron HUD. Each eye has two empty optical option slots. Persistent advertising crowds the display, imposing disadvantage on sight-based Perception until replacement. Passive Perception: sight 7 (12 minus 5 for disadvantage); other senses 12.",
       "icon": "eye",
       "acquired": true,
       "installed": true
