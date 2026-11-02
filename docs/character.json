@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "scene-0102",
-    "release": "0124.1",
-    "phase": "Morning after Long Rest",
+    "id": "scene-0173",
+    "release": "0174.1",
+    "phase": "Awake at motel; incoming Agent call",
     "story_started": true,
     "period": "Late 2078",
     "location": "Badlands · Sunset Motel, Room 12"
@@ -162,7 +162,7 @@
   "resources": {
     "hp_current": 10,
     "hp_note": "Full health. Superficial cuts and bruises.",
-    "xp": 0,
+    "xp": 150,
     "next_level_xp": 300,
     "slot_max": 1,
     "slot_tier": 1,
@@ -180,7 +180,13 @@
       "next_benefit_not_before": "2078-11-19T09:00:00"
     },
     "hit_dice_current": 1,
-    "programs_known_max": 2
+    "programs_known_max": 2,
+    "last_sleep": {
+      "start": "2078-11-18T21:00:00",
+      "end": "2078-11-19T07:00:00",
+      "interrupted": false,
+      "long_rest_benefits_applied": false
+    }
   },
   "programs": [
     {
@@ -295,7 +301,7 @@
       "load": 0,
       "status": "Installed",
       "summary": "Exposed ear-mounted controller; basic interface functions only",
-      "detail": "Decades-old Rocklin cyberware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two exposed adapter sockets accept shards; one holds the Ronin Fragment and one is empty; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. When the distinctive casing is visible, observers have advantage on Perception checks to recognise or identify Fen using it as an identifying feature. Concealing it beneath his hair removes that visual cue. Exposed connections are vulnerable to snagging, grabbing or direct damage. Retains a biomonitor, basic holophone/HUD, neural link, virtuality display and five empty neuralware option connections.",
+      "detail": "Decades-old Rocklin cyberware patched together by Maelstrom. A bulky external casing hooks around the right ear, connected to an implanted neural anchor. Two exposed adapter sockets accept shards; one holds the Ronin Fragment and one is empty; a basic personal-link lead exits beside the upper-neck mount. Fen conceals the casing beneath his hair. When the distinctive casing is visible, observers have advantage on Perception checks to recognise or identify Fen using it as an identifying feature. Concealing it beneath his hair removes that visual cue. Exposed connections are vulnerable to snagging, grabbing or direct damage. Retains a biomonitor, basic HUD, neural link, virtuality display and five empty neuralware option connections.",
       "icon": "chip",
       "acquired": true,
       "installed": true
@@ -312,27 +318,18 @@
       "installed": true,
       "icon": "chip",
       "summary": "Arasaka Shadow Mk.1 Cyberdeck running Ronin’s local Fragment",
-      "detail": "An Arasaka Shadow Mk.1 Cyberdeck loaded with Ronin’s bounded local Fragment, connected through the NP-1 neural interface. Slim black casing, translucent red circuitry cover and white Arasaka markings. The Fragment replaces the corporate firmware, disabling Arasaka telemetry, remote administration and manufacturer backdoors. Occupies one shard socket while slotted. While operating, doubles native Neural Tolerance before earned Adaptation and lasting Tolerance Injury: 11 → 22, and grants +1 to Contractor Program attack rolls and Program Save DC, including Utilities: Attack +6, DC 14 at current attributes. Supplies the Contractor interface locally; these passive benefits require no extra charge or Execution Slot. Removal ends these bonuses; recalculate Tolerance, Overload and the Stability ceiling under the normal rules.",
+      "detail": "An Arasaka Shadow Mk.1 Cyberdeck loaded with Ronin’s bounded local Fragment, connected through the NP-1 neural interface. Slim black casing, translucent red circuitry cover and white Arasaka markings. The Fragment replaces the corporate firmware, disabling Arasaka telemetry, remote administration and manufacturer backdoors. Occupies one shard socket while slotted. While operating, doubles native Neural Tolerance before earned Adaptation and lasting Tolerance Injury: 11 → 22, and grants +1 to Contractor Program attack rolls and Program Save DC, including Utilities: Attack +6, DC 14 at current attributes. Supplies the Contractor interface locally; these passive benefits require no extra charge or Execution Slot. Removal ends these bonuses; recalculate Tolerance, Overload and the Stability ceiling under the normal rules. A makeshift Agent function added during the jailbreak supports calls to and from Ronin only.",
       "condition": "Local Runtime",
       "display_grade": "CLASS APPARATUS"
     }
   ],
   "inventory": [
     {
-      "id": "clothes",
-      "name": "Clothing",
-      "status": "Removed · In room",
-      "location": "Sunset Motel, Room 12 · Chair and beside basin",
-      "summary": "Black-and-red Arasaka outfit · long coat, shirt, trousers, gloves and boots",
-      "detail": "A tailored, calf-length black coat with structured shoulders, a high collar, red edging and red lining visible through the split hem. A red Arasaka emblem marks the left chest. Beneath it: a fitted black high-neck shirt with narrow red trim, tapered black trousers, and a black belt with a rectangular metal buckle and red straps at the hips. Black full-finger gloves have red back panels and wrist straps; mid-calf black boots have multiple buckle straps with red toes, soles and side panels. Scuffed and dirty from the escape and rough handling, but wearable. Pockets empty.",
-      "icon": "pack"
-    },
-    {
       "id": "tamayura",
       "name": "Arasaka Tamayura",
-      "status": "Loaded · Bedside table",
-      "location": "Sunset Motel, Room 12 · Bedside table",
-      "summary": "Serviced surplus pistol · 8 rounds total",
+      "status": "Loaded · Holstered",
+      "location": "Sunset Motel, Room 12 · Beside bed",
+      "summary": "Serviced surplus pistol · 8 rounds loaded",
       "detail": "Dark finish with worn edges and scratched grip. One compatible magazine inserted: 7 ordinary rounds in the magazine and 1 chambered. Attack +3 (Reflexes +1, Proficiency +2); damage 1d10 + 1 Piercing; range 40/120 ft. Familiar model taught by Fen’s father.",
       "icon": "target",
       "acquired": true,
@@ -345,30 +342,125 @@
       "ammunition_total": 8
     },
     {
-      "id": "meals",
-      "name": "Sealed Meals",
-      "quantity": 5,
+      "id": "clothes-0133",
+      "name": "Clothing",
+      "status": "Set aside",
+      "location": "Sunset Motel, Room 12 · Beside bed",
+      "summary": "Charcoal jacket · grey shirt · black trousers and shoes",
+      "detail": "Plain charcoal synthetic jacket with a stand collar, matte zip and two slanted pockets; hip-length, straight cut. Smoke-grey crew-neck shirt, black straight-leg work trousers, black web belt and plain black lace-up shoes with rubber soles. Fresh underwear and socks included. Clean ordinary clothing, no prominent branding. Complete outfit purchased at Second Shift for €$150. Remaining cash is in a trouser pocket.",
+      "icon": "pack"
+    },
+    {
+      "id": "keys-unit4",
+      "name": "Unit Four Keys",
+      "status": "Stored",
+      "location": "Sunset Motel, Room 12 · Beside bed",
+      "summary": "Two keys · Yellow tag 4",
+      "detail": "Personnel-door and shutter-lock keys for Unit Four at Cinder Court, Rancho Coronado. A scratched yellow plastic tag is marked 4.",
+      "icon": "pack",
+      "acquired": true
+    },
+    {
+      "id": "agent-grade-a",
+      "name": "Zetatech Grade A",
+      "status": "At bedside",
+      "location": "Sunset Motel, Room 12 · Bedside table",
+      "summary": "Refurbished handheld Agent · Calls, messages & maps",
+      "detail": "Black handheld with scuffed corners, an intact screen and charging lead. Calls, texts, maps, local Data Pool access and an organiser assistant. New prepaid number shared with Ronin. Local service paid through 18 December 2078, 19:15.",
+      "icon": "pack",
+      "acquired": true,
+      "number_shared_with": [
+        "Ronin"
+      ]
+    },
+    {
+      "id": "cigarettes-shinsei-red",
+      "name": "Shinsei Red",
+      "status": "Stored",
+      "location": "Sunset Motel, Room 12 · Beside bed",
+      "summary": "Japanese cigarettes · 19 remaining",
+      "detail": "Red-and-white pack of Shinsei Red cigarettes. Nineteen remain.",
+      "icon": "pack",
+      "acquired": true,
+      "quantity": 19
+    },
+    {
+      "id": "lighter",
+      "name": "Disposable Lighter",
+      "status": "Stored",
+      "location": "Sunset Motel, Room 12 · Beside bed",
+      "summary": "Plastic pocket lighter",
+      "detail": "Cheap plastic pocket lighter in working order.",
+      "icon": "pack",
+      "acquired": true
+    },
+    {
+      "id": "tamayura-holster",
+      "name": "Tamayura waistband holster",
+      "status": "Set aside",
+      "location": "Sunset Motel, Room 12 · Beside bed",
+      "summary": "Black moulded polymer · Steel belt clip",
+      "detail": "Plain black moulded-polymer holster with a steel belt clip and covered trigger guard. Holds the Tamayura beside the bed.",
+      "icon": "pack",
+      "acquired": true
+    },
+    {
+      "id": "tamayura-spare-magazine",
+      "name": "Tamayura Spare Magazine",
+      "status": "Stored",
+      "location": "Sunset Motel, Room 12 · Beside bed",
+      "summary": "Standard eight-round magazine · Empty",
+      "detail": "Original Arasaka surplus magazine with worn finish and sound feed lips. Standard capacity: 8 rounds. Currently empty.",
+      "icon": "pack",
+      "acquired": true,
+      "magazine_capacity": 8,
+      "magazine_rounds": 0
+    },
+    {
+      "id": "tamayura-ammunition",
+      "name": "Tamayura Ammunition",
+      "status": "Stored",
+      "location": "Sunset Motel, Room 12 · Beside bed",
+      "summary": "50 standard-ball cartridges · Boxed",
+      "detail": "Sealed retail box containing 50 Tamayura-compatible standard-ball cartridges.",
+      "icon": "pack",
+      "acquired": true,
+      "quantity": 50
+    },
+    {
+      "id": "shard-case",
+      "name": "Shard Case",
       "status": "Stored",
       "location": "Sunset Motel, Room 12",
-      "summary": "5 sealed meals",
+      "summary": "Empty Fragment delivery case",
+      "detail": "The empty case that held the Ronin Fragment Cyberdeck.",
+      "icon": "pack"
+    },
+    {
+      "id": "meals",
+      "name": "Sealed Meals",
+      "quantity": 3,
+      "status": "Stored",
+      "location": "Sunset Motel, Room 12",
+      "summary": "3 sealed meals",
       "detail": "Remaining motel food supplied by Ronin.",
       "icon": "pack"
     },
     {
       "id": "water",
       "name": "Bottled Water",
-      "quantity": 5,
+      "quantity": 3,
       "status": "Stored",
       "location": "Sunset Motel, Room 12",
-      "summary": "5 sealed bottles · 5 litres",
-      "detail": "1 litre per bottle.",
+      "summary": "3 sealed bottles · 3.5 litres",
+      "detail": "3 sealed 1-litre bottles and 0.5 litres in an opened bottle.",
       "icon": "pack"
     }
   ],
   "finances": {
-    "cash": 0,
+    "cash": 426,
     "bank": "Frozen",
-    "housing": "Revoked",
+    "housing": "Sunset Motel, Room 12 prepaid through 19 November, 22:00. Authorised occupant of Mori’s Unit Four workshop in Rancho Coronado. Corporate housing revoked.",
     "trauma_team": "Cancelled",
     "debt": "None established"
   },
@@ -400,6 +492,48 @@
       "date": "18 / 11 / 2078",
       "title": "Morning",
       "body": "After eating, washing and sleeping, Fen wakes in Room 12 to the telephone ringing at nine."
+    },
+    {
+      "id": "scene-0134",
+      "type": "Story",
+      "date": "18 / 11 / 2078",
+      "title": "A change of clothes",
+      "body": "Bought a plain jacket outfit at Second Shift and discarded the old Arasaka clothing in an alley dumpster."
+    },
+    {
+      "id": "scene-0148",
+      "type": "Story",
+      "date": "18 / 11 / 2078",
+      "title": "Mesa Industrial Surplus",
+      "body": "Nolan quoted €$5,500 for both R-440 compute servers and the S-120 storage server, including replacement of its faulty fan. Sale quote valid until 19 November, 11:47, while stock remains available.\n\nAlternatively, one R-440 rents for €$250 per 30 days with a €$1,000 refundable deposit: €$1,250 upfront. Rental quote valid until 19 November, 11:58. No hosting offered. Written quotes sent to Mori; no equipment acquired."
+    },
+    {
+      "id": "scene-0153",
+      "type": "Story",
+      "date": "18 / 11 / 2078",
+      "title": "Switchyard Repairs — completed",
+      "body": "Recovered the recorder’s full 48 hours of delivery records for Vera Sanz, including an unscheduled stop followed by a damaged-shipment entry. Payment received: €$600. Earned 150 XP."
+    },
+    {
+      "id": "scene-0163",
+      "type": "Story",
+      "date": "18 / 11 / 2078",
+      "title": "Cinder Court — Unit Four",
+      "body": "Mori secured the workshop lease. Fen holds the personnel-door and shutter keys and is authorised to stay overnight. The room remains empty; equipment and cooling are not installed.\n\nMonthly rent: €$900, paid through 18 December, 18:50. Half the security deposit is paid; the remaining €$450 is due 2 December, 18:50. Water, sewer and the existing connection are included; electricity is metered separately. Cooling installation needs Ortega’s approval of specifications and placement."
+    },
+    {
+      "id": "scene-0167",
+      "type": "Story",
+      "date": "18 / 11 / 2078",
+      "title": "Street purchases",
+      "body": "Bought a refurbished Zetatech Grade A Agent, Shinsei Red cigarettes and a lighter. Rancho Arms supplied a fitted Tamayura holster, an empty spare magazine and 50 standard-ball cartridges."
+    },
+    {
+      "id": "scene-0173",
+      "type": "Story",
+      "date": "19 / 11 / 2078",
+      "title": "Morning at the motel",
+      "body": "After returning by taxi, eating and speaking with Ronin about software and neural-interface work, Fen showered and slept. At 07:00, the new Agent rings from an unfamiliar number. Breakfast has not yet been eaten."
     }
   ],
   "rules": {
@@ -410,7 +544,7 @@
     "capacity": "Native Neural Tolerance = max(4, 6 + Constitution modifier + Cool modifier) = 11. Add earned Adaptation, currently 0. Current Load: 0. Load above tolerance creates overload risk. Baseline replacements are Load 0. Operating Ronin Fragment doubles native Tolerance to 22 before Adaptation and Tolerance Injury.",
     "progression": "Level 2 at 300 total XP: two tier-1 slots, three known programs and two Firmware Upgrades. Level 3: Interface Platform.",
     "secured_intrusion": "Use Intelligence (Technology), currently +4, for meaningful obstacles such as protected files or persistent access. Routine work needs no roll; complex jobs can involve several distinct checks. This costs no Execution Slot. Active opposition can instead become a deep-dive combat encounter using normal initiative, actions, attacks and saves, with suitable deep-dive equipment.",
-    "weapon_handling": "Arasaka Tamayura: semiautomatic Power pistol. Each attack spends one round. Detachable magazine reload: Action or Bonus Action with a free hand, once per turn, using an accessible compatible magazine. Magazine capacity 8; current load 7 in the magazine + 1 chambered. No spare ammunition is owned."
+    "weapon_handling": "Arasaka Tamayura: semiautomatic Power pistol. Each attack spends one round. Detachable magazine reload: Action or Bonus Action with a free hand, once per turn, using an accessible compatible magazine. Magazine capacity 8; current load 7 in the magazine + 1 chambered. One empty standard 8-round spare magazine and 50 boxed matching cartridges owned. Total ammunition: 58, including 8 loaded."
   },
   "sources": [
     {
@@ -426,12 +560,12 @@
     "calendar": "Gregorian",
     "year": 2078,
     "month": 11,
-    "day": 18,
-    "hour": 9,
+    "day": 19,
+    "hour": 7,
     "minute": 0,
     "period": "Late 2078",
     "location": "Badlands · Sunset Motel, Room 12",
     "time_basis": "Local time",
-    "event_id": "scene-0102"
+    "event_id": "scene-0173"
   }
 }
