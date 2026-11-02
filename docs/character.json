@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot": {
     "id": "scene-0173",
-    "release": "0174.1",
+    "release": "0176.1",
     "phase": "Awake at motel; incoming Agent call",
     "story_started": true,
     "period": "Late 2078",
@@ -339,7 +339,8 @@
       "magazine_capacity": 8,
       "magazine_rounds": 7,
       "chamber_rounds": 1,
-      "ammunition_total": 8
+      "ammunition_total": 8,
+      "location_id": "sunset-room12"
     },
     {
       "id": "clothes-0133",
@@ -348,7 +349,8 @@
       "location": "Sunset Motel, Room 12 · Beside bed",
       "summary": "Charcoal jacket · grey shirt · black trousers and shoes",
       "detail": "Plain charcoal synthetic jacket with a stand collar, matte zip and two slanted pockets; hip-length, straight cut. Smoke-grey crew-neck shirt, black straight-leg work trousers, black web belt and plain black lace-up shoes with rubber soles. Fresh underwear and socks included. Clean ordinary clothing, no prominent branding. Complete outfit purchased at Second Shift for €$150. Remaining cash is in a trouser pocket.",
-      "icon": "pack"
+      "icon": "pack",
+      "location_id": "sunset-room12"
     },
     {
       "id": "keys-unit4",
@@ -358,7 +360,8 @@
       "summary": "Two keys · Yellow tag 4",
       "detail": "Personnel-door and shutter-lock keys for Unit Four at Cinder Court, Rancho Coronado. A scratched yellow plastic tag is marked 4.",
       "icon": "pack",
-      "acquired": true
+      "acquired": true,
+      "location_id": "sunset-room12"
     },
     {
       "id": "agent-grade-a",
@@ -371,7 +374,8 @@
       "acquired": true,
       "number_shared_with": [
         "Ronin"
-      ]
+      ],
+      "location_id": "sunset-room12"
     },
     {
       "id": "cigarettes-shinsei-red",
@@ -382,7 +386,8 @@
       "detail": "Red-and-white pack of Shinsei Red cigarettes. Nineteen remain.",
       "icon": "pack",
       "acquired": true,
-      "quantity": 19
+      "quantity": 19,
+      "location_id": "sunset-room12"
     },
     {
       "id": "lighter",
@@ -392,7 +397,8 @@
       "summary": "Plastic pocket lighter",
       "detail": "Cheap plastic pocket lighter in working order.",
       "icon": "pack",
-      "acquired": true
+      "acquired": true,
+      "location_id": "sunset-room12"
     },
     {
       "id": "tamayura-holster",
@@ -402,7 +408,8 @@
       "summary": "Black moulded polymer · Steel belt clip",
       "detail": "Plain black moulded-polymer holster with a steel belt clip and covered trigger guard. Holds the Tamayura beside the bed.",
       "icon": "pack",
-      "acquired": true
+      "acquired": true,
+      "location_id": "sunset-room12"
     },
     {
       "id": "tamayura-spare-magazine",
@@ -414,7 +421,8 @@
       "icon": "pack",
       "acquired": true,
       "magazine_capacity": 8,
-      "magazine_rounds": 0
+      "magazine_rounds": 0,
+      "location_id": "sunset-room12"
     },
     {
       "id": "tamayura-ammunition",
@@ -425,7 +433,8 @@
       "detail": "Sealed retail box containing 50 Tamayura-compatible standard-ball cartridges.",
       "icon": "pack",
       "acquired": true,
-      "quantity": 50
+      "quantity": 50,
+      "location_id": "sunset-room12"
     },
     {
       "id": "shard-case",
@@ -434,7 +443,8 @@
       "location": "Sunset Motel, Room 12",
       "summary": "Empty Fragment delivery case",
       "detail": "The empty case that held the Ronin Fragment Cyberdeck.",
-      "icon": "pack"
+      "icon": "pack",
+      "location_id": "sunset-room12"
     },
     {
       "id": "meals",
@@ -442,6 +452,7 @@
       "quantity": 3,
       "status": "Stored",
       "location": "Sunset Motel, Room 12",
+      "location_id": "sunset-room12",
       "summary": "3 sealed meals",
       "detail": "Remaining motel food supplied by Ronin.",
       "icon": "pack"
@@ -452,9 +463,22 @@
       "quantity": 3,
       "status": "Stored",
       "location": "Sunset Motel, Room 12",
+      "location_id": "sunset-room12",
       "summary": "3 sealed bottles · 3.5 litres",
       "detail": "3 sealed 1-litre bottles and 0.5 litres in an opened bottle.",
       "icon": "pack"
+    }
+  ],
+  "storage_locations": [
+    {
+      "id": "sunset-room12",
+      "name": "Sunset Motel · Room 12",
+      "area": "Badlands"
+    },
+    {
+      "id": "cinder-unit4",
+      "name": "Cinder Court · Unit Four",
+      "area": "Rancho Coronado"
     }
   ],
   "finances": {

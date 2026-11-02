@@ -9,10 +9,10 @@ A personal, unofficial Cyberpunk story companion for Fen Vikutā, using a campai
 - **Character:** current attributes, health, XP, resources, skills and the complete Contractor [Warlock] class reference.
 - **Programs:** selected software, original spell names, targeting requirements, costs and effects.
 - **Cyberware:** installed devices, their functions and current Neural Tolerance.
-- **Inventory:** owned equipment, ammunition, supplies, locations and available money.
+- **Inventory:** On You for carried gear; Storage for possessions at each named location, alongside available money.
 - **Journal:** player-known story entries and reference rules.
 
-Current character snapshot: **19 November 2078, 07:00 — Sunset Motel, Room 12**, awake with an incoming Agent call. App release **0174.1**; enacted scene **0173**. The story clock changes with play, not real-world time. The app is a maintained reference; it does not advance the story or make character choices.
+Current character snapshot: **19 November 2078, 07:00 — Sunset Motel, Room 12**, awake with an incoming Agent call. App release **0176.1**; enacted scene **0173**. The story clock changes with play, not real-world time. The app is a maintained reference; it does not advance the story or make character choices.
 
 On iPhone, open the companion in Safari and use **Share → Add to Home Screen**. Internet access is required. Export Sheet downloads the same player-facing record displayed by the app. Reload an already-open companion to receive this update.
 
