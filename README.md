@@ -9,10 +9,10 @@ A personal, unofficial Cyberpunk story companion for Fen Vikutā, using a campai
 - **Character:** current attributes, health, XP, resources, skills and the complete Contractor [Warlock] class reference.
 - **Programs:** selected software, original spell names, targeting requirements, costs and effects.
 - **Cyberware:** installed devices, their functions and current Neural Tolerance. The capacity reference includes accepted overuse and speedware rules.
-- **Inventory:** On You for carried gear; Storage for possessions at each named location. Tap a category tile to open its items; Storage first presents location buttons. Weapons includes ammunition and magazines; holsters sit under Armour & Clothing. Cash remains visible beside the heading.
+- **Inventory:** On You for carried gear; Storage for possessions at each named location. Tap a category tile to open its items; Storage first presents location buttons. Weapons includes ammunition and magazines; holsters sit under Armour & Clothing. Six core tiles remain visible, including Medical and Vehicles when empty. Cash remains visible beside the heading.
 - **Journal:** player-known story entries and reference rules.
 
-Current character snapshot: **19 November 2078, 13:07 — Cinder Court, Unit Four**, after a meal and setting up the bedding. Interface release **0228.1**; character snapshot **0224.1**, enacted scene **0220**. The story clock changes with play, not real-world time. The app is a maintained reference; it does not advance the story or make character choices.
+Current character snapshot: **19 November 2078, 13:07 — Cinder Court, Unit Four**, after a meal and setting up the bedding. Interface release **0229.1**; character snapshot **0224.1**, enacted scene **0220**. The story clock changes with play, not real-world time. The app is a maintained reference; it does not advance the story or make character choices.
 
 On iPhone, open the companion in Safari and use **Share → Add to Home Screen**. Internet access is required. Export Sheet downloads the same player-facing record displayed by the app. Reload an already-open companion to receive this update.
 

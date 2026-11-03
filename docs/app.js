@@ -2,7 +2,7 @@
 // Touch focus must not inherit a native keyboard focus ring on iOS.
 document.addEventListener('pointerdown',()=>{document.documentElement.dataset.input='pointer';},{passive:true,capture:true});
 document.addEventListener('keydown',e=>{if(e.key==='Tab')document.documentElement.dataset.input='keyboard';},true);
-const paths={person:'M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM4 21v-3c0-3 3-5 8-5s8 2 8 5v3',bolt:'m14 2-9 12h6l-1 8 9-12h-6z',chip:'M6 6h12v12H6z M9 9h6v6H9z M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4',pack:'M5 7h14v14H5z M9 7V3h6v4M5 12h14m-9 0v3h4v-3',journal:'M5 3h14v18H5z M9 7h6m-6 5h6m-6 5h4',eye:'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Zm10-3a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z',target:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM12 1v5m0 12v5M1 12h5m12 0h5',command:'M3 5h18v14H3z M7 9l3 3-3 3m6 0h4',body:'m5 8 3-4h3v6l3-2 4 2 3 6-4 4H8l-5-4z',reflex:'m13 2-5 7 6 2-6 11m6-11 5 3M3 7h3m-5 6h4m-1 5h3',heart:'M12 21 3 12C-2 5 7 0 12 6c5-6 14-1 9 6ZM3 12h5l2-4 3 8 2-4h6',brain:'M12 3C8-1 4 5 6 7 1 7 1 14 5 15c-2 5 4 8 7 4V3Zm0 0c4-4 8 2 6 4 5 0 5 7 1 8 2 5-4 8-7 4M7 8l3 3m-5 4h4m8-7-3 3m5 4h-4',tool:'M14 3a6 6 0 0 0-7 8L2 17l5 5 6-6a6 6 0 0 0 8-7l-4 4-5-5z',cool:'M4 8h6l2 2 2-2h6l-1 7h-5l-2-3-2 3H5z M2 8h20M7 3h10',info:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM12 10v7m0-10v1',arrow:'M4 12h16m-6-6 6 6-6 6',shield:'m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6z',warning:'m12 3 10 18H2z M12 9v6m0 2v1'};
+const paths={vehicle:'M3 11l2-6h14l2 6v7H3z M3 11h18M6 15h2m8 0h2M5 18v3m14-3v3',person:'M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM4 21v-3c0-3 3-5 8-5s8 2 8 5v3',bolt:'m14 2-9 12h6l-1 8 9-12h-6z',chip:'M6 6h12v12H6z M9 9h6v6H9z M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4',pack:'M5 7h14v14H5z M9 7V3h6v4M5 12h14m-9 0v3h4v-3',journal:'M5 3h14v18H5z M9 7h6m-6 5h6m-6 5h4',eye:'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Zm10-3a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z',target:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM12 1v5m0 12v5M1 12h5m12 0h5',command:'M3 5h18v14H3z M7 9l3 3-3 3m6 0h4',body:'m5 8 3-4h3v6l3-2 4 2 3 6-4 4H8l-5-4z',reflex:'m13 2-5 7 6 2-6 11m6-11 5 3M3 7h3m-5 6h4m-1 5h3',heart:'M12 21 3 12C-2 5 7 0 12 6c5-6 14-1 9 6ZM3 12h5l2-4 3 8 2-4h6',brain:'M12 3C8-1 4 5 6 7 1 7 1 14 5 15c-2 5 4 8 7 4V3Zm0 0c4-4 8 2 6 4 5 0 5 7 1 8 2 5-4 8-7 4M7 8l3 3m-5 4h4m8-7-3 3m5 4h-4',tool:'M14 3a6 6 0 0 0-7 8L2 17l5 5 6-6a6 6 0 0 0 8-7l-4 4-5-5z',cool:'M4 8h6l2 2 2-2h6l-1 7h-5l-2-3-2 3H5z M2 8h20M7 3h10',info:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM12 10v7m0-10v1',arrow:'M4 12h16m-6-6 6 6-6 6',shield:'m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6z',warning:'m12 3 10 18H2z M12 9v6m0 2v1'};
 const icon=n=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${paths[n]||paths.chip}"/></svg>`;
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const signed=n=>n>=0?`+${n}`:`−${Math.abs(n)}`;
@@ -55,7 +55,8 @@ function cyberwareView(){const d=sheet.derived;return `${title('Installed cyberw
 `;}
 function selectChrome(id){if(!sheet.cyberware.some(c=>c.id===id))return;selectedChrome=id;document.querySelectorAll('[data-chrome]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.chrome===id));document.getElementById('hardware-details').innerHTML=chromeDetail();}
 // Category is a presentation label; location and holdings remain authoritative.
-const inventoryCategories=[['weapons','Weapons'],['armour-clothing','Armour & Clothing'],['tech-tools','Tech & Tools'],['medical','Medical'],['food-drink','Food & Drink'],['personal','Personal Items'],['furnishings','Furnishings & Storage'],['other','Other Gear']];
+const inventoryCategories=[['weapons','Weapons'],['armour-clothing','Armour & Clothing'],['tech-tools','Tech & Tools'],['medical','Medical'],['personal','Personal Items'],['vehicles','Vehicles'],['food-drink','Food & Drink'],['furnishings','Furnishings & Storage'],['other','Other Gear']];
+const inventoryCoreCategories=['weapons','armour-clothing','tech-tools','medical','personal','vehicles'];
 const inventoryCategoryById={
  'tamayura':'weapons','clothes-0133':'armour-clothing','kevlar-vest-0216':'armour-clothing',
  'tamayura-holster':'armour-clothing','tamayura-spare-magazine':'weapons','tamayura-ammunition':'weapons',
@@ -63,7 +64,7 @@ const inventoryCategoryById={
  'shard-case':'furnishings','folding-cot-0218':'furnishings','blankets-0218':'furnishings','pillow-0218':'furnishings',
  'meals':'food-drink','water':'food-drink'
 };
-const inventoryCategoryIcons={weapons:'target','armour-clothing':'shield','tech-tools':'tool',medical:'heart','food-drink':'pack',personal:'person',furnishings:'pack',other:'pack'};
+const inventoryCategoryIcons={weapons:'target','armour-clothing':'shield','tech-tools':'tool',medical:'heart',vehicles:'vehicle','food-drink':'pack',personal:'person',furnishings:'pack',other:'pack'};
 function inventoryCategory(item){const id=item.category||inventoryCategoryById[item.id];return inventoryCategories.some(c=>c[0]===id)?id:'other';}
 function inventoryTile(attribute,id,label,sub,symbol,count){return `<button class="inventory-tile" ${attribute}="${esc(id)}"><span class="inventory-tile-top">${icon(symbol)}<small>${count} ${count===1?'ENTRY':'ENTRIES'}</small></span><strong>${esc(label)}</strong>${sub?`<span class="inventory-tile-sub">${esc(sub)}</span>`:''}<span class="chevron" aria-hidden="true"></span></button>`;}
 function renderInventoryResults(focusSelector=null){
@@ -76,13 +77,14 @@ function renderInventoryResults(focusSelector=null){
   if(!sheet.storage_locations.length)html+='<p class="muted">No storage locations.</p>';
  }else{
   const items=sheet.inventory.filter(i=>i.location_id===location.id);
-  const available=inventoryCategories.filter(([id])=>items.some(i=>inventoryCategory(i)===id));
+  const available=inventoryCategories.filter(([id])=>inventoryCoreCategories.includes(id)||items.some(i=>inventoryCategory(i)===id));
   let chosen=inventorySelections[location.id];
   if(!available.some(([id])=>id===chosen))chosen=inventorySelections[location.id]=null;
   const category=available.find(([id])=>id===chosen);
   if(category){
    const selected=items.filter(i=>inventoryCategory(i)===chosen);
    html=`<button class="inventory-back" data-inventory-back="categories">${icon('arrow')} ${esc(location.name)}</button><h2 class="inventory-heading" tabindex="-1">${esc(category[1])}</h2><div class="record-list">${selected.map(i=>row('item-'+i.id,i.name,i.summary,`<small>${esc(i.status.toUpperCase())}</small>`,i.icon)).join('')}</div>`;
+   if(!selected.length)html+=`<p class="muted">${chosen==='vehicles'?'No vehicles recorded here.':'No items in this category.'}</p>`;
   }else{
    html=`${inventoryViewMode==='storage'?`<button class="inventory-back" data-inventory-back="locations">${icon('arrow')} Storage Locations</button>`:''}<h2 class="inventory-heading" tabindex="-1">${esc(location.name)}</h2>${location.area?`<p class="inventory-area">${esc(location.area)}</p>`:''}<div class="inventory-tiles">${available.map(([id,label])=>inventoryTile('data-inventory-category',id,label,'',inventoryCategoryIcons[id],items.filter(i=>inventoryCategory(i)===id).length)).join('')}</div>`;
    if(!items.length)html+='<p class="muted">Nothing stored here.</p>';
