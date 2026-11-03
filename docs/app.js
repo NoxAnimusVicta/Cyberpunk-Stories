@@ -55,15 +55,15 @@ function cyberwareView(){const d=sheet.derived;return `${title('Installed cyberw
 `;}
 function selectChrome(id){if(!sheet.cyberware.some(c=>c.id===id))return;selectedChrome=id;document.querySelectorAll('[data-chrome]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.chrome===id));document.getElementById('hardware-details').innerHTML=chromeDetail();}
 // Category is a presentation label; location and holdings remain authoritative.
-const inventoryCategories=[['weapons','Weapons'],['armour-clothing','Armour & Clothing'],['ammo-accessories','Ammo & Weapon Accessories'],['tech-tools','Tech & Tools'],['medical','Medical'],['food-drink','Food & Drink'],['personal','Personal Items'],['furnishings','Furnishings & Storage'],['other','Other Gear']];
+const inventoryCategories=[['weapons','Weapons'],['armour-clothing','Armour & Clothing'],['tech-tools','Tech & Tools'],['medical','Medical'],['food-drink','Food & Drink'],['personal','Personal Items'],['furnishings','Furnishings & Storage'],['other','Other Gear']];
 const inventoryCategoryById={
  'tamayura':'weapons','clothes-0133':'armour-clothing','kevlar-vest-0216':'armour-clothing',
- 'tamayura-holster':'ammo-accessories','tamayura-spare-magazine':'ammo-accessories','tamayura-ammunition':'ammo-accessories',
+ 'tamayura-holster':'armour-clothing','tamayura-spare-magazine':'weapons','tamayura-ammunition':'weapons',
  'agent-grade-a':'tech-tools','keys-unit4':'personal','cigarettes-shinsei-red':'personal','lighter':'personal',
  'shard-case':'furnishings','folding-cot-0218':'furnishings','blankets-0218':'furnishings','pillow-0218':'furnishings',
  'meals':'food-drink','water':'food-drink'
 };
-const inventoryCategoryIcons={weapons:'target','armour-clothing':'shield','ammo-accessories':'bolt','tech-tools':'tool',medical:'heart','food-drink':'pack',personal:'person',furnishings:'pack',other:'pack'};
+const inventoryCategoryIcons={weapons:'target','armour-clothing':'shield','tech-tools':'tool',medical:'heart','food-drink':'pack',personal:'person',furnishings:'pack',other:'pack'};
 function inventoryCategory(item){const id=item.category||inventoryCategoryById[item.id];return inventoryCategories.some(c=>c[0]===id)?id:'other';}
 function inventoryTile(attribute,id,label,sub,symbol,count){return `<button class="inventory-tile" ${attribute}="${esc(id)}"><span class="inventory-tile-top">${icon(symbol)}<small>${count} ${count===1?'ENTRY':'ENTRIES'}</small></span><strong>${esc(label)}</strong>${sub?`<span class="inventory-tile-sub">${esc(sub)}</span>`:''}<span class="chevron" aria-hidden="true"></span></button>`;}
 function renderInventoryResults(focusSelector=null){
