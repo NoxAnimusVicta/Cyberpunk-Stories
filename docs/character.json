@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "scene-0173",
-    "release": "0176.1",
-    "phase": "Awake at motel; incoming Agent call",
+    "id": "scene-0220",
+    "release": "0224.1",
+    "phase": "Meal eaten and bedding set up at Unit Four",
     "story_started": true,
     "period": "Late 2078",
-    "location": "Badlands · Sunset Motel, Room 12"
+    "location": "Cinder Court - Unit Four"
   },
   "identity": {
     "name": "Fen Vikutā",
@@ -140,8 +140,8 @@
   },
   "derived": {
     "hp_max": 10,
-    "ac": 11,
-    "ac_basis": "Unarmoured: 10 + Reflexes (+1).",
+    "ac": 13,
+    "ac_basis": "Kevlar vest: 12 + Reflexes (+1).",
     "initiative": 1,
     "speed_ft": 30,
     "program_attack": 6,
@@ -162,7 +162,7 @@
   "resources": {
     "hp_current": 10,
     "hp_note": "Full health. Superficial cuts and bruises.",
-    "xp": 150,
+    "xp": 200,
     "next_level_xp": 300,
     "slot_max": 1,
     "slot_tier": 1,
@@ -328,113 +328,114 @@
       "id": "tamayura",
       "name": "Arasaka Tamayura",
       "status": "Loaded · Holstered",
-      "location": "Sunset Motel, Room 12 · Beside bed",
+      "location": "On you · Waistband holster beneath jacket",
       "summary": "Serviced surplus pistol · 8 rounds loaded",
       "detail": "Dark finish with worn edges and scratched grip. One compatible magazine inserted: 7 ordinary rounds in the magazine and 1 chambered. Attack +3 (Reflexes +1, Proficiency +2); damage 1d10 + 1 Piercing; range 40/120 ft. Familiar model taught by Fen’s father.",
       "icon": "target",
       "acquired": true,
-      "equipped": false,
+      "equipped": true,
       "attack_bonus": 3,
       "damage": "1d10+1 Piercing",
       "magazine_capacity": 8,
       "magazine_rounds": 7,
       "chamber_rounds": 1,
       "ammunition_total": 8,
-      "location_id": "sunset-room12"
+      "location_id": "on-person"
     },
     {
       "id": "clothes-0133",
       "name": "Clothing",
-      "status": "Set aside",
-      "location": "Sunset Motel, Room 12 · Beside bed",
+      "status": "Worn",
+      "location": "On you · Worn",
       "summary": "Charcoal jacket · grey shirt · black trousers and shoes",
       "detail": "Plain charcoal synthetic jacket with a stand collar, matte zip and two slanted pockets; hip-length, straight cut. Smoke-grey crew-neck shirt, black straight-leg work trousers, black web belt and plain black lace-up shoes with rubber soles. Fresh underwear and socks included. Clean ordinary clothing, no prominent branding. Complete outfit purchased at Second Shift for €$150. Remaining cash is in a trouser pocket.",
       "icon": "pack",
-      "location_id": "sunset-room12"
+      "location_id": "on-person"
     },
     {
       "id": "keys-unit4",
       "name": "Unit Four Keys",
-      "status": "Stored",
-      "location": "Sunset Motel, Room 12 · Beside bed",
+      "status": "Carried",
+      "location": "On you · Pocket",
       "summary": "Two keys · Yellow tag 4",
       "detail": "Personnel-door and shutter-lock keys for Unit Four at Cinder Court, Rancho Coronado. A scratched yellow plastic tag is marked 4.",
       "icon": "pack",
       "acquired": true,
-      "location_id": "sunset-room12"
+      "location_id": "on-person"
     },
     {
       "id": "agent-grade-a",
       "name": "Zetatech Grade A",
-      "status": "At bedside",
-      "location": "Sunset Motel, Room 12 · Bedside table",
+      "status": "Carried",
+      "location": "On you · Pocket",
       "summary": "Refurbished handheld Agent · Calls, messages & maps",
-      "detail": "Black handheld with scuffed corners, an intact screen and charging lead. Calls, texts, maps, local Data Pool access and an organiser assistant. New prepaid number shared with Ronin. Local service paid through 18 December 2078, 19:15.",
+      "detail": "Black handheld with scuffed corners, an intact screen and charging lead. Calls, texts, maps, local Data Pool access and an organiser assistant. Prepaid number shared with Ronin and Dr Patricia Cárdenas, who saved Fen as Vik. Future clinic bookings go through Mori. Local service paid through 18 December 2078, 19:15.",
       "icon": "pack",
       "acquired": true,
       "number_shared_with": [
-        "Ronin"
+        "Ronin",
+        "Dr Patricia Cárdenas"
       ],
-      "location_id": "sunset-room12"
+      "location_id": "on-person"
     },
     {
       "id": "cigarettes-shinsei-red",
       "name": "Shinsei Red",
-      "status": "Stored",
-      "location": "Sunset Motel, Room 12 · Beside bed",
+      "status": "Carried",
+      "location": "On you · Pocket",
       "summary": "Japanese cigarettes · 19 remaining",
       "detail": "Red-and-white pack of Shinsei Red cigarettes. Nineteen remain.",
       "icon": "pack",
       "acquired": true,
       "quantity": 19,
-      "location_id": "sunset-room12"
+      "location_id": "on-person"
     },
     {
       "id": "lighter",
       "name": "Disposable Lighter",
-      "status": "Stored",
-      "location": "Sunset Motel, Room 12 · Beside bed",
+      "status": "Carried",
+      "location": "On you · Pocket",
       "summary": "Plastic pocket lighter",
       "detail": "Cheap plastic pocket lighter in working order.",
       "icon": "pack",
       "acquired": true,
-      "location_id": "sunset-room12"
+      "location_id": "on-person"
     },
     {
       "id": "tamayura-holster",
-      "name": "Tamayura waistband holster",
-      "status": "Set aside",
-      "location": "Sunset Motel, Room 12 · Beside bed",
+      "name": "Tamayura Waistband Holster",
+      "status": "Worn",
+      "location": "On you · Waistband beneath jacket",
       "summary": "Black moulded polymer · Steel belt clip",
-      "detail": "Plain black moulded-polymer holster with a steel belt clip and covered trigger guard. Holds the Tamayura beside the bed.",
+      "detail": "Plain black moulded-polymer holster with a steel belt clip and covered trigger guard. Holds the Tamayura beneath the jacket.",
       "icon": "pack",
       "acquired": true,
-      "location_id": "sunset-room12"
+      "location_id": "on-person"
     },
     {
       "id": "tamayura-spare-magazine",
       "name": "Tamayura Spare Magazine",
-      "status": "Stored",
-      "location": "Sunset Motel, Room 12 · Beside bed",
+      "status": "Carried",
+      "location": "On you · Pocket",
       "summary": "Standard eight-round magazine · Empty",
       "detail": "Original Arasaka surplus magazine with worn finish and sound feed lips. Standard capacity: 8 rounds. Currently empty.",
       "icon": "pack",
       "acquired": true,
       "magazine_capacity": 8,
       "magazine_rounds": 0,
-      "location_id": "sunset-room12"
+      "location_id": "on-person"
     },
     {
       "id": "tamayura-ammunition",
       "name": "Tamayura Ammunition",
-      "status": "Stored",
-      "location": "Sunset Motel, Room 12 · Beside bed",
+      "status": "Carried",
+      "location": "On you · Jacket pocket",
       "summary": "50 standard-ball cartridges · Boxed",
       "detail": "Sealed retail box containing 50 Tamayura-compatible standard-ball cartridges.",
       "icon": "pack",
       "acquired": true,
       "quantity": 50,
-      "location_id": "sunset-room12"
+      "location_id": "on-person"
     },
     {
       "id": "shard-case",
@@ -447,25 +448,80 @@
       "location_id": "sunset-room12"
     },
     {
+      "id": "kevlar-vest-0216",
+      "name": "Kevlar Vest",
+      "status": "Worn",
+      "location": "On you - Beneath charcoal jacket",
+      "location_id": "on-person",
+      "summary": "Black concealable ballistic vest - Light Armour",
+      "detail": "Close-fitting black textile carrier with flexible ballistic panels over chest and back and adjustable side fastenings. Light Armour: AC 12 + Reflexes, currently 13. Weight 4 kg. Wear 0. Purchased new from Rancho Arms for 200 Euro Dollars, fitting included.",
+      "icon": "pack",
+      "acquired": true,
+      "equipped": true,
+      "mass_kg": 4,
+      "wear": 0,
+      "armour_category": "Light",
+      "base_ac": 12
+    },
+    {
+      "id": "folding-cot-0218",
+      "name": "Folding Cot",
+      "quantity": 1,
+      "status": "Stored",
+      "location": "Cinder Court, Unit Four - Rear room",
+      "location_id": "cinder-unit4",
+      "summary": "Grey canvas cot - Set up",
+      "detail": "New grey canvas cot on a steel frame, 190 x 70 cm. Set up along the rear-room wall, clear of the sink and doorway; its carry bag is retained beside it. Purchased for 100 Euro Dollars.",
+      "icon": "pack",
+      "acquired": true,
+      "equipped": false
+    },
+    {
+      "id": "blankets-0218",
+      "name": "Fleece Blankets",
+      "quantity": 2,
+      "status": "Stored",
+      "location": "Cinder Court, Unit Four - Rear room",
+      "location_id": "cinder-unit4",
+      "summary": "Two fleece blankets - On cot",
+      "detail": "Two new thick synthetic fleece blankets, unwrapped and laid out on the cot. Purchased for 15 Euro Dollars each.",
+      "icon": "pack",
+      "acquired": true,
+      "equipped": false
+    },
+    {
+      "id": "pillow-0218",
+      "name": "Pillow and Pillowcase",
+      "quantity": 1,
+      "status": "Stored",
+      "location": "Cinder Court, Unit Four - Rear room",
+      "location_id": "cinder-unit4",
+      "summary": "Pillow with fitted case - On cot",
+      "detail": "New polyester-filled pillow with its plain cotton-blend case fitted, placed on the cot. Purchased together for 10 Euro Dollars.",
+      "icon": "pack",
+      "acquired": true,
+      "equipped": false
+    },
+    {
       "id": "meals",
       "name": "Sealed Meals",
-      "quantity": 3,
+      "quantity": 2,
       "status": "Stored",
-      "location": "Sunset Motel, Room 12",
-      "location_id": "sunset-room12",
-      "summary": "3 sealed meals",
+      "location": "Cinder Court, Unit Four · Rear room, clear of sink",
+      "location_id": "cinder-unit4",
+      "summary": "2 sealed meals",
       "detail": "Remaining motel food supplied by Ronin.",
       "icon": "pack"
     },
     {
       "id": "water",
       "name": "Bottled Water",
-      "quantity": 3,
+      "quantity": 2,
       "status": "Stored",
-      "location": "Sunset Motel, Room 12",
-      "location_id": "sunset-room12",
-      "summary": "3 sealed bottles · 3.5 litres",
-      "detail": "3 sealed 1-litre bottles and 0.5 litres in an opened bottle.",
+      "location": "Cinder Court, Unit Four · Rear room, clear of sink",
+      "location_id": "cinder-unit4",
+      "summary": "2 sealed bottles · 2.5 litres",
+      "detail": "2 sealed 1-litre bottles and 0.5 litres in an opened bottle.",
       "icon": "pack"
     }
   ],
@@ -482,7 +538,7 @@
     }
   ],
   "finances": {
-    "cash": 426,
+    "cash": 476,
     "bank": "Frozen",
     "housing": "Sunset Motel, Room 12 prepaid through 19 November, 22:00. Authorised occupant of Mori’s Unit Four workshop in Rancho Coronado. Corporate housing revoked.",
     "trauma_team": "Cancelled",
@@ -529,7 +585,7 @@
       "type": "Story",
       "date": "18 / 11 / 2078",
       "title": "Mesa Industrial Surplus",
-      "body": "Nolan quoted €$5,500 for both R-440 compute servers and the S-120 storage server, including replacement of its faulty fan. Sale quote valid until 19 November, 11:47, while stock remains available.\n\nAlternatively, one R-440 rents for €$250 per 30 days with a €$1,000 refundable deposit: €$1,250 upfront. Rental quote valid until 19 November, 11:58. No hosting offered. Written quotes sent to Mori; no equipment acquired."
+      "body": "Nolan quoted €$5,500 for both R-440 compute servers and the S-120 storage server, including replacement of its faulty fan. Sale quote valid until 19 November, 11:47, while stock remains available.\n\nAlternatively, one R-440 rents for €$250 per 30 days with a €$1,000 refundable deposit: €$1,250 upfront. Rental quote valid until 19 November, 11:58. No hosting offered. Written quotes sent to Mori; no equipment acquired.\n\nBoth quotes have now expired unaccepted. Ronin has deferred the purchase; availability and terms need reconfirmation."
     },
     {
       "id": "scene-0153",
@@ -543,7 +599,7 @@
       "type": "Story",
       "date": "18 / 11 / 2078",
       "title": "Cinder Court — Unit Four",
-      "body": "Mori secured the workshop lease. Fen holds the personnel-door and shutter keys and is authorised to stay overnight. The room remains empty; equipment and cooling are not installed.\n\nMonthly rent: €$900, paid through 18 December, 18:50. Half the security deposit is paid; the remaining €$450 is due 2 December, 18:50. Water, sewer and the existing connection are included; electricity is metered separately. Cooling installation needs Ortega’s approval of specifications and placement."
+      "body": "Mori secured the workshop lease. Fen holds the personnel-door and shutter keys and is authorised to stay overnight. The workshop was empty on handover. Servers and cooling have not been installed; supplies and bedding were brought in the following day.\n\nMonthly rent: €$900, paid through 18 December, 18:50. Half the security deposit is paid; the remaining €$450 is due 2 December, 18:50. Water, sewer and the existing connection are included; electricity is metered separately. Cooling installation needs Ortega’s approval of specifications and placement."
     },
     {
       "id": "scene-0167",
@@ -557,7 +613,56 @@
       "type": "Story",
       "date": "19 / 11 / 2078",
       "title": "Morning at the motel",
-      "body": "After returning by taxi, eating and speaking with Ronin about software and neural-interface work, Fen showered and slept. At 07:00, the new Agent rings from an unfamiliar number. Breakfast has not yet been eaten."
+      "body": "After returning by taxi, eating and speaking with Ronin about software and neural-interface work, Fen showered and slept. At 07:00, the new Agent rang before breakfast."
+    },
+    {
+      "id": "scene-0180",
+      "type": "Story",
+      "date": "19 / 11 / 2078",
+      "title": "Supplies at Unit Four",
+      "body": "Brought the remaining meals and water from Sunset Motel to Unit Four by taxi. Fare paid: €$60. Relay Cybernetics is about half an hour away on foot; Ronin was awaiting a reply to his inquiry at the time."
+    },
+    {
+      "id": "scene-0200",
+      "type": "Story",
+      "date": "19 / 11 / 2078",
+      "title": "Relay Cybernetics — completed",
+      "body": "Corrected the cyberarm adapter acknowledgement profile and passed bench tests. Dr Patricia Cárdenas paid €$450. Earned 50 XP.\n\nFen shared his Agent number, saved as Vik, and browsed the clinic’s new and refurbished cyberware. No implant purchased. Future fault reports and bookings go through Mori; no further clinic job agreed."
+    },
+    {
+      "id": "scene-0213",
+      "type": "Story",
+      "date": "19 / 11 / 2078",
+      "title": "Next work",
+      "body": "Ronin renewed his existing hosting for another week and deferred Nolan’s servers. He proposed seeking a fixer introduction for retrieval work using Fen’s technical skills."
+    },
+    {
+      "id": "scene-0216",
+      "type": "Story",
+      "date": "19 / 11 / 2078",
+      "title": "Kevlar vest",
+      "body": "Purchased a new black Kevlar vest from Rancho Arms for €$200, fitted beneath the jacket. Armour Class is now 13."
+    },
+    {
+      "id": "scene-0218",
+      "type": "Story",
+      "date": "19 / 11 / 2078",
+      "title": "Bedding for Unit Four",
+      "body": "Bought a folding cot, two fleece blankets and a pillow with pillowcase from Valley Home & Surplus for €$140. Carried everything back to Unit Four."
+    },
+    {
+      "id": "scene-0219",
+      "type": "Invitation",
+      "date": "19 / 11 / 2078 · 15:00",
+      "title": "Switchyard Repairs — invitation pending",
+      "body": "Vera Sanz offered to meet at Switchyard Repairs to discuss retrieval work. Attendance has not been confirmed and no job accepted. The target, security, crew and payment remain to be discussed."
+    },
+    {
+      "id": "scene-0220",
+      "type": "Story",
+      "date": "19 / 11 / 2078 · 13:07",
+      "title": "Settling in",
+      "body": "Ate one meal, drank a litre of water and set up the cot, both blankets and pillow in Unit Four’s rear room. Two sealed meals and 2.5 litres of water remain here. Ronin’s deck call is still open."
     }
   ],
   "rules": {
@@ -568,7 +673,8 @@
     "capacity": "Native Neural Tolerance = max(4, 6 + Constitution modifier + Cool modifier) = 11. Add earned Adaptation, currently 0. Current Load: 0. Load above tolerance creates overload risk. Baseline replacements are Load 0. Operating Ronin Fragment doubles native Tolerance to 22 before Adaptation and Tolerance Injury.",
     "progression": "Level 2 at 300 total XP: two tier-1 slots, three known programs and two Firmware Upgrades. Level 3: Interface Platform.",
     "secured_intrusion": "Use Intelligence (Technology), currently +4, for meaningful obstacles such as protected files or persistent access. Routine work needs no roll; complex jobs can involve several distinct checks. This costs no Execution Slot. Active opposition can instead become a deep-dive combat encounter using normal initiative, actions, attacks and saves, with suitable deep-dive equipment.",
-    "weapon_handling": "Arasaka Tamayura: semiautomatic Power pistol. Each attack spends one round. Detachable magazine reload: Action or Bonus Action with a free hand, once per turn, using an accessible compatible magazine. Magazine capacity 8; current load 7 in the magazine + 1 chambered. One empty standard 8-round spare magazine and 50 boxed matching cartridges owned. Total ammunition: 58, including 8 loaded."
+    "weapon_handling": "Arasaka Tamayura: semiautomatic Power pistol. Each attack spends one round. Detachable magazine reload: Action or Bonus Action with a free hand, once per turn, using an accessible compatible magazine. Magazine capacity 8; current load 7 in the magazine + 1 chambered. One empty standard 8-round spare magazine and 50 boxed matching cartridges owned. Total ammunition: 58, including 8 loaded.",
+    "cyberware_overrides": "### Voluntary Override\nAn eligible implant can exceed a physiological recovery limit or safety governor. It uses its normal activation, prerequisites and duration, and supplies one activation. Each override costs 1 Stability, followed by a Cool save; success prevents further loss, while failure loses another 1, or 2 on failure by 5 or more, with the normal symptom procedure.\n\n### Escalating Risk\nOne shared counter covers every implant. Each earlier override since the last qualifying Long Rest adds +2 to the next override save DC, after the normal DC cap. Every override requires its save. A coincident ordinary trigger combines into that check. A qualifying Long Rest resets the counter; Stability recovers only through its separate recovery and treatment rules.\n\n### Eligibility\nThe equipment card specifies override eligibility. This bypasses a physiological or governor limit; it cannot refill Execution Slots, ammunition, injectors or air reserves, or repair broken hardware. Ordinary permitted use has no override cost. First reaching zero Stability cannot itself trigger lasting Tolerance Injury; the existing catastrophic-breakdown procedure still governs that risk.\n\n### Relative Acceleration\nSandevistan models specify normal and maximum overclock ratings. For physical weapon or unarmed attacks, a faster attacker has advantage against a slower target; a slower attacker has disadvantage. Equal ratings confer neither. Normal advantage cancellation, cover and targeting apply.\n\n### Overclock\nA supported overclock lasts until the start of your next ordinary turn, or until the implant ends. Each interval costs one override. Exceeding the safe-use allowance and overclocking the same activation count as one combined override. Each model defines its actual limits and activation timing.\n\n### Accelerated Turn\nA high-end model may grant one extra turn immediately after your ordinary turn, at most once per round: movement, an Action, an eligible Bonus Action and the normal object interaction. Extra Attack and eligible once-per-turn offensive features work normally. Resources, ammunition, Concentration and per-turn Program restrictions still apply.\n\n### Timing\nOnly ordinary turns advance ongoing damage or healing, cooldowns, condition expiry, death saves, scheduled recovery saves and Reaction refresh. Movement, attacks and other actual events still trigger their normal effects during accelerated activity. Extra turns cannot generate more accelerated turns; once-per-round features stay once per round.\n\n### Model Specifications\nDuration, safe uses, ratings, movement, Load and combinations belong to each model’s equipment card. The existing R3 reflex accelerator retains its listed effects. No Sandevistan is currently installed."
   },
   "sources": [
     {
@@ -585,11 +691,11 @@
     "year": 2078,
     "month": 11,
     "day": 19,
-    "hour": 7,
-    "minute": 0,
+    "hour": 13,
+    "minute": 7,
     "period": "Late 2078",
-    "location": "Badlands · Sunset Motel, Room 12",
+    "location": "Cinder Court - Unit Four",
     "time_basis": "Local time",
-    "event_id": "scene-0173"
+    "event_id": "scene-0220"
   }
 }
