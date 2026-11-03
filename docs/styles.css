@@ -92,3 +92,28 @@ html[data-input="pointer"] :focus{outline:none}
 .inventory-group{margin-top:24px}.inventory-group .record-side{white-space:normal;max-width:32%}
 .current-scene{margin-bottom:24px}.current-scene p{margin-bottom:0}
 @media(max-width:700px){.world-stamp{max-width:43%}.inventory-group .record-row{display:grid;grid-template-columns:38px minmax(0,1fr) 8px;gap:6px 12px}.inventory-group .record-icon{grid-column:1;grid-row:1 / 3}.inventory-group .record-main{grid-column:2;grid-row:1}.inventory-group .record-side{grid-column:2;grid-row:2;text-align:left;max-width:100%;margin:0}.inventory-group .chevron{grid-column:3;grid-row:1 / 3;margin:0}}
+
+/* Inventory: location and category tiles, then focused item lists. */
+.inventory-cash{color:var(--yellow);font-size:26px;white-space:nowrap;line-height:1.15;text-align:right}
+.inventory-cash small{display:block;font-size:10px;letter-spacing:1.4px;color:var(--muted);margin-bottom:5px}
+.inventory-modes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:24px 0}
+.inventory-modes button{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;border:1px solid var(--line);background:#160f19;color:var(--muted);font-size:18px;font-weight:600}
+.inventory-modes button[aria-pressed=true]{color:var(--cyan);border-color:var(--cyan);background:#17323c70;box-shadow:inset 0 -2px var(--cyan)}
+.inventory-modes svg{width:20px;height:20px}
+.inventory-heading{font-size:23px;font-weight:600;line-height:1.2;margin:0 0 18px;letter-spacing:.5px}
+.inventory-area{color:var(--muted);margin:-8px 0 20px}
+.inventory-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.inventory-tile{position:relative;display:flex;flex-direction:column;min-width:0;min-height:145px;padding:20px 22px;text-align:left;border:1px solid var(--line);background:linear-gradient(135deg,#361728b0,#101722);color:var(--text)}
+.inventory-tile-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:22px;color:var(--cyan)}
+.inventory-tile-top svg{width:29px;height:29px}
+.inventory-tile-top small{font-size:10px;letter-spacing:1px;color:var(--muted)}
+.inventory-tile strong{font-size:21px;line-height:1.25;font-weight:600;padding-right:13px}
+.inventory-tile-sub{font-size:13px;color:var(--muted);margin-top:6px}
+.inventory-tile .chevron{position:absolute;right:16px;bottom:22px}
+.inventory-tile:active{border-color:var(--cyan);background:#17323c}
+.inventory-locations{grid-template-columns:repeat(2,minmax(0,1fr))}
+.inventory-back{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 0 12px;background:transparent;color:var(--cyan);font-size:15px;text-align:left}
+.inventory-back svg{width:18px;height:18px;transform:rotate(180deg)}
+.inventory-account{margin-top:32px}.inventory-account>summary{font-size:15px;color:var(--muted)}
+.inventory-account td{vertical-align:top;overflow-wrap:anywhere}.inventory-account td:first-child{width:33%}
+@media(max-width:700px){.inventory-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.inventory-tile{padding:16px 14px;min-height:132px}.inventory-tile strong{font-size:18px}.inventory-tile-top{margin-bottom:18px}.inventory-tile-top svg{width:25px;height:25px}.inventory-tile-top small{font-size:9px;letter-spacing:.4px}.inventory-tile .chevron{right:12px;bottom:19px}.inventory-cash{font-size:23px}.inventory-locations{grid-template-columns:1fr}.inventory-locations .inventory-tile{min-height:126px}.inventory-account td{font-size:14px}}

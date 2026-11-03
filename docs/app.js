@@ -17,7 +17,8 @@ const formatMoment=value=>{const [date,time]=value.split('T');return date.split(
 let sheet,active='character',programFilter='all',programSearch='',returnFocus=null;
 const scrollPositions={};
 let inventoryViewMode='on-you';
-const openStorageLocations=new Set();
+let inventoryLocation=null;
+const inventorySelections={};
 const softwareOnline=()=>sheet.resources.software_online!==false;
 const slotDisplay=()=>softwareOnline()?`${sheet.resources.slots_current??sheet.resources.slots_preview} / ${sheet.resources.slot_max}`:'OFFLINE';
 const programDisplay=()=>softwareOnline()?`Attack ${signed(sheet.derived.program_attack)} · Save DC ${sheet.derived.program_dc}`:'Runtime not installed';
@@ -62,45 +63,50 @@ const inventoryCategoryById={
  'shard-case':'furnishings','folding-cot-0218':'furnishings','blankets-0218':'furnishings','pillow-0218':'furnishings',
  'meals':'food-drink','water':'food-drink'
 };
-const inventoryFilters={'on-you':{category:'all',search:''},storage:{category:'all',search:''}};
+const inventoryCategoryIcons={weapons:'target','armour-clothing':'shield','ammo-accessories':'bolt','tech-tools':'tool',medical:'heart','food-drink':'pack',personal:'person',furnishings:'pack',other:'pack'};
 function inventoryCategory(item){const id=item.category||inventoryCategoryById[item.id];return inventoryCategories.some(c=>c[0]===id)?id:'other';}
-function inventoryScope(){return sheet.inventory.filter(i=>(i.location_id==='on-person')===(inventoryViewMode==='on-you'));}
-function inventoryGroups(items){return inventoryCategories.map(([id,label])=>{
- const group=items.filter(i=>inventoryCategory(i)===id);
- return group.length?`<section class="wide-section" aria-label="${esc(label)}"><h2 class="section-label">${esc(label)} <small>${group.length} ${group.length===1?'ENTRY':'ENTRIES'}</small></h2><div class="record-list">${group.map(i=>row('item-'+i.id,i.name,i.summary,`<small>${esc(i.status.toUpperCase())}</small>`,i.icon)).join('')}</div></section>`:'';
- }).join('');}
-function inventoryControls(){
- const state=inventoryFilters[inventoryViewMode],items=inventoryScope();
- const available=inventoryCategories.filter(([id])=>items.some(i=>inventoryCategory(i)===id));
- if(state.category!=='all'&&!available.some(([id])=>id===state.category))state.category='all';
- return `<input class="search" id="inventory-search" type="search" aria-label="Search inventory" placeholder="Search items…" value="${esc(state.search)}"><select class="search" id="inventory-category" aria-label="Inventory category"><option value="all">All Categories</option>${available.map(([id,label])=>`<option value="${id}" ${state.category===id?'selected':''}>${esc(label)}</option>`).join('')}</select>`;
-}
-function renderInventoryResults(){
- const state=inventoryFilters[inventoryViewMode],scope=inventoryScope(),query=state.search.trim().toLowerCase();
- const items=scope.filter(i=>(state.category==='all'||inventoryCategory(i)===state.category)&&`${i.name} ${i.summary} ${i.detail}`.toLowerCase().includes(query));
- const filtering=!!query||state.category!=='all';
- document.getElementById('inventory-count').textContent=`${items.length} ${items.length===1?'entry':'entries'}${filtering?' / '+scope.length:''}`;
+function inventoryTile(attribute,id,label,sub,symbol,count){return `<button class="inventory-tile" ${attribute}="${esc(id)}"><span class="inventory-tile-top">${icon(symbol)}<small>${count} ${count===1?'ENTRY':'ENTRIES'}</small></span><strong>${esc(label)}</strong>${sub?`<span class="inventory-tile-sub">${esc(sub)}</span>`:''}<span class="chevron" aria-hidden="true"></span></button>`;}
+function renderInventoryResults(focusSelector=null){
+ const root=document.getElementById('inventory-results');
+ const location=inventoryViewMode==='on-you'?{id:'on-person',name:'On You',area:''}:sheet.storage_locations.find(l=>l.id===inventoryLocation);
  let html='';
- if(inventoryViewMode==='on-you')html=items.length?inventoryGroups(items):`<div class="empty"><strong>${filtering?'No matching items.':'Nothing carried.'}</strong></div>`;
- else html=sheet.storage_locations.map(location=>{
-  const stored=items.filter(i=>i.location_id===location.id);
-  if(filtering&&!stored.length)return '';
-  return `<details class="reference-disclosure inventory-group" data-storage-location="${esc(location.id)}" ${filtering||openStorageLocations.has(location.id)?'open':''}><summary>${esc(location.name)}</summary><p class="muted">${esc(location.area)}</p>${stored.length?inventoryGroups(stored):'<p class="muted">Nothing stored here.</p>'}</details>`;
- }).join('')||`<div class="empty"><strong>${filtering?'No matching items.':'No storage locations.'}</strong></div>`;
- document.getElementById('inventory-results').innerHTML=html;
- document.getElementById('inventory-carry').hidden=inventoryViewMode!=='on-you';
+ if(!location){
+  inventoryLocation=null;
+  html=`<h2 class="inventory-heading" tabindex="-1">Storage Locations</h2><div class="inventory-tiles inventory-locations">${sheet.storage_locations.map(l=>inventoryTile('data-inventory-location',l.id,l.name,l.area,'pack',sheet.inventory.filter(i=>i.location_id===l.id).length)).join('')}</div>`;
+  if(!sheet.storage_locations.length)html+='<p class="muted">No storage locations.</p>';
+ }else{
+  const items=sheet.inventory.filter(i=>i.location_id===location.id);
+  const available=inventoryCategories.filter(([id])=>items.some(i=>inventoryCategory(i)===id));
+  let chosen=inventorySelections[location.id];
+  if(!available.some(([id])=>id===chosen))chosen=inventorySelections[location.id]=null;
+  const category=available.find(([id])=>id===chosen);
+  if(category){
+   const selected=items.filter(i=>inventoryCategory(i)===chosen);
+   html=`<button class="inventory-back" data-inventory-back="categories">${icon('arrow')} ${esc(location.name)}</button><h2 class="inventory-heading" tabindex="-1">${esc(category[1])}</h2><div class="record-list">${selected.map(i=>row('item-'+i.id,i.name,i.summary,`<small>${esc(i.status.toUpperCase())}</small>`,i.icon)).join('')}</div>`;
+  }else{
+   html=`${inventoryViewMode==='storage'?`<button class="inventory-back" data-inventory-back="locations">${icon('arrow')} Storage Locations</button>`:''}<h2 class="inventory-heading" tabindex="-1">${esc(location.name)}</h2>${location.area?`<p class="inventory-area">${esc(location.area)}</p>`:''}<div class="inventory-tiles">${available.map(([id,label])=>inventoryTile('data-inventory-category',id,label,'',inventoryCategoryIcons[id],items.filter(i=>inventoryCategory(i)===id).length)).join('')}</div>`;
+   if(!items.length)html+='<p class="muted">Nothing stored here.</p>';
+  }
+ }
+ root.innerHTML=html;
+ if(focusSelector){const target=root.querySelector(focusSelector)||root.querySelector('.inventory-heading');target?.focus({preventScroll:true});}
 }
-function inventoryView(){return `${title('Possessions & accounts','Inventory')}<div class="inventory-summary"><div class="panel"><strong>€$ ${sheet.finances.cash}</strong><span>SPENDABLE CASH</span></div><div class="panel"><strong>${esc(sheet.finances.bank.toUpperCase())}</strong><span>CORPORATE ACCOUNTS</span></div><div class="panel"><strong>${esc(sheet.finances.debt==='None established'?'NONE':sheet.finances.debt)}</strong><span>ESTABLISHED DEBT</span></div></div>
- <div class="toolbar" role="group" aria-label="Inventory location">${[['on-you','On You'],['storage','Storage']].map(([id,label])=>`<button class="filter" data-inventory-view="${id}" aria-controls="inventory-results" aria-pressed="${inventoryViewMode===id}">${label}</button>`).join('')}</div>
- <div class="toolbar" id="inventory-controls">${inventoryControls()}</div><p class="muted" id="inventory-count" role="status"></p>
+function inventoryView(){return `${title('Possessions','Inventory',`<span class="inventory-cash"><small>CASH</small>€$ ${sheet.finances.cash}</span>`)}
+ <div class="inventory-modes" role="group" aria-label="Inventory location">${[['on-you','On You','person'],['storage','Storage','pack']].map(([id,label,symbol])=>`<button data-inventory-view="${id}" aria-controls="inventory-results" aria-pressed="${inventoryViewMode===id}">${icon(symbol)}${label}</button>`).join('')}</div>
  <div id="inventory-results" class="inventory-group"></div>
- <section id="inventory-carry" class="panel wide-section"><h2>Carry Capacity</h2><div class="resource-line">${sheet.derived.carry_lb} <span class="muted">LB</span></div></section>
- <section class="panel wide-section"><h2>Accommodation & Coverage</h2><table class="detail-table"><tbody><tr><td>Trauma Team</td><td>${esc(sheet.finances.trauma_team)}</td></tr><tr><td>Housing</td><td>${esc(sheet.finances.housing)}</td></tr></tbody></table></section>`;
+ <details class="reference-disclosure inventory-account"><summary>Accounts & Living Arrangements</summary><table class="detail-table"><tbody><tr><td>Corporate Accounts</td><td>${esc(sheet.finances.bank)}</td></tr><tr><td>Debt</td><td>${esc(sheet.finances.debt)}</td></tr><tr><td>Trauma Team</td><td>${esc(sheet.finances.trauma_team)}</td></tr><tr><td>Housing</td><td>${esc(sheet.finances.housing)}</td></tr><tr><td>Carry Capacity</td><td>${sheet.derived.carry_lb} lb</td></tr></tbody></table></details>`;
 }
-document.addEventListener('click',e=>{const button=e.target.closest('[data-inventory-view]');if(!button)return;inventoryViewMode=button.dataset.inventoryView;document.querySelectorAll('[data-inventory-view]').forEach(b=>b.setAttribute('aria-pressed',b===button));document.getElementById('inventory-controls').innerHTML=inventoryControls();renderInventoryResults();});
-document.addEventListener('input',e=>{if(e.target.id==='inventory-search'){inventoryFilters[inventoryViewMode].search=e.target.value;renderInventoryResults();}});
-document.addEventListener('change',e=>{if(e.target.id==='inventory-category'){inventoryFilters[inventoryViewMode].category=e.target.value;renderInventoryResults();}});
-document.addEventListener('toggle',e=>{const id=e.target.dataset?.storageLocation;if(id&&e.target.isConnected){const state=inventoryFilters.storage;if(state.category!=='all'||state.search.trim())return;if(e.target.open)openStorageLocations.add(id);else openStorageLocations.delete(id);}},true);
+document.addEventListener('click',e=>{
+ const mode=e.target.closest('[data-inventory-view]');
+ if(mode){inventoryViewMode=mode.dataset.inventoryView;document.querySelectorAll('[data-inventory-view]').forEach(b=>b.setAttribute('aria-pressed',b===mode));renderInventoryResults();return;}
+ const place=e.target.closest('[data-inventory-location]');
+ if(place&&sheet.storage_locations.some(l=>l.id===place.dataset.inventoryLocation)){inventoryLocation=place.dataset.inventoryLocation;inventorySelections[inventoryLocation]=null;renderInventoryResults('.inventory-heading');return;}
+ const category=e.target.closest('[data-inventory-category]');
+ const locationId=inventoryViewMode==='on-you'?'on-person':inventoryLocation;
+ if(category&&inventoryCategories.some(([id])=>id===category.dataset.inventoryCategory)){inventorySelections[locationId]=category.dataset.inventoryCategory;renderInventoryResults('.inventory-heading');return;}
+ const back=e.target.closest('[data-inventory-back]');
+ if(back){if(back.dataset.inventoryBack==='locations'){const old=inventoryLocation;inventoryLocation=null;renderInventoryResults(`[data-inventory-location="${old}"]`);}else{const old=inventorySelections[locationId];inventorySelections[locationId]=null;renderInventoryResults(`[data-inventory-category="${old}"]`);}}
+});
 function journalView(){return `${title('Campaign record','Journal',`<span class="tag">${sheet.snapshot.story_started?'CURRENT':'PRE-STORY'}</span>`)}<section class="panel current-scene"><h2>${esc(sheet.snapshot.phase)}</h2><p>${esc(sheet.snapshot.location)}</p></section><div class="journal-layout"><div>${sheet.journal.map(j=>`<article class="journal-entry"><div class="eyebrow">${esc(j.date)} / ${esc(j.type)}</div><h2>${esc(j.title)}</h2>${j.body.split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join('')}</article>`).join('')}</div><div><section class="panel"><h2>Field Reference</h2><div class="record-list">${row('health','Rest & Medical Recovery','Resources, HP and persistent injuries','','heart')}${row('intrusion','Electronic Access','Targets, intrusion and execution requirements','','chip')}${row('overrides','Cyberware Overuse & Speedware','Overrides, acceleration and timing','','chip')}${row('training','Progression','XP and the next Contractor unlocks','','journal')}</div></section></div></div>`;}
 function openDetail(id){if(id==='class-reference'){openClassReference();return;}dialog.classList.remove('class-reference-dialog');returnFocus=document.activeElement;document.getElementById('detail-kicker').textContent='RONIN / RECORD';let html='';const d=sheet.derived;
  const feature=sheet.features.find(f=>f.id===id);if(feature)html=`<h2>${feature.name}</h2><div class="source-name">[${feature.original}]</div>${!softwareOnline()&&['burst-processing','semantic-link'].includes(feature.id)?'<p class="tag">OFFLINE · RUNTIME NOT INSTALLED</p>':''}${ruleSections(feature.detail,feature.id==='burst-processing'?[["Execution","Cool is"],["Slots & Recovery","One tier-1 slot"],["Concentration","One Concentration"],["Action Economy","If you execute a Bonus Action"],["Requirements","All programs"]]:[])}`;
