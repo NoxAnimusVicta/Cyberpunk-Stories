@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "scene-0220",
-    "release": "0246.1",
-    "phase": "Meal eaten and bedding set up at Unit Four",
+    "id": "selection-0273",
+    "release": "0274.1",
+    "phase": "Recovery completed",
     "story_started": true,
     "period": "Late 2078",
-    "location": "Cinder Court - Unit Four"
+    "location": "Switchyard Repairs - Rancho Coronado"
   },
   "identity": {
     "name": "Fen Vikutā",
@@ -21,9 +21,9 @@
     "provider": "Ronin",
     "ancestry": "Standard human",
     "art": "assets/character-art.jpg",
-    "bio": "An Arasaka researcher raised in Japan, born to a Japanese researcher and a Night City-born intelligence operative. Both parents were Saburo loyalists. Fen carries their legacy into a life stripped of corporate protection.",
+    "bio": "An Arasaka researcher raised in Japan, born to a Japanese researcher and a Night City-born intelligence operative. Both parents were Saburo loyalists. Fen carries their legacy into a life stripped of corporate protection. An autodidact with a taste for older films and Japanese sports cars, he spent years driving and drifting in Japan and Night City.",
     "specialty": "Engram systems · Cognitive interfaces",
-    "level": 1
+    "level": 2
   },
   "build": {
     "method": "27-point buy",
@@ -112,7 +112,9 @@
       "Investigation",
       "History",
       "Science",
-      "Technology"
+      "Technology",
+      "Deception",
+      "Persuasion"
     ],
     "saves": [
       "INT",
@@ -139,7 +141,7 @@
     "tools_note": "Cybertech kit proficient; kit not owned."
   },
   "derived": {
-    "hp_max": 10,
+    "hp_max": 17,
     "ac": 13,
     "ac_basis": "Kevlar vest: 12 + Reflexes (+1).",
     "initiative": 1,
@@ -147,7 +149,7 @@
     "program_attack": 6,
     "program_dc": 14,
     "hit_die": "d8",
-    "hit_dice_total": 1,
+    "hit_dice_total": 2,
     "concentration_save": 2,
     "native_tolerance": 11,
     "adaptation": 0,
@@ -161,16 +163,16 @@
   },
   "resources": {
     "hp_current": 10,
-    "hp_note": "Full health. Superficial cuts and bruises.",
-    "xp": 200,
-    "next_level_xp": 300,
-    "slot_max": 1,
+    "hp_note": "Physically uninjured. Level advancement increased maximum HP; current HP unchanged.",
+    "xp": 350,
+    "next_level_xp": 900,
+    "slot_max": 2,
     "slot_tier": 1,
     "slots_preview": 1,
     "temporary_hp": 0,
     "injuries_status": "None",
     "exhaustion_status": "None",
-    "rest_note": "One Tier-1 Execution Slot returns after a Short Rest or Long Rest. A qualifying Long Rest with food and water restores 2 HP.",
+    "rest_note": "Two Tier-1 Execution Slots return after a Short Rest or Long Rest. A qualifying fed and hydrated Long Rest restores 2 HP.",
     "software_online": true,
     "slots_current": 1,
     "last_long_rest": {
@@ -179,13 +181,18 @@
       "benefits_applied": true,
       "next_benefit_not_before": "2078-11-19T09:00:00"
     },
-    "hit_dice_current": 1,
-    "programs_known_max": 2,
+    "hit_dice_current": 2,
+    "programs_known_max": 3,
     "last_sleep": {
-      "start": "2078-11-18T21:00:00",
-      "end": "2078-11-19T07:00:00",
+      "start": "2078-11-19T13:10:00",
+      "end": "2078-11-19T14:10:00",
       "interrupted": false,
       "long_rest_benefits_applied": false
+    },
+    "last_short_rest": {
+      "start": "2078-11-19T13:10:00",
+      "end": "2078-11-19T14:10:00",
+      "benefits_applied": true
     }
   },
   "programs": [
@@ -200,9 +207,9 @@
       "duration": "Instantaneous",
       "concentration": false,
       "summary": "Overload exposed circuitry with a precise destructive packet.",
-      "effect": "Make one ranged program attack (+6) against a visible compatible powered target. On a hit, deal 1d10 Electrical damage to physical HP, or 1d10 Data damage to ICE integrity in software mode. At total levels 5, 11 and 17, send 2, 3 and 4 packets respectively, each with its own attack and target. No Cool modifier is added to damage at level 1.",
+      "effect": "Make one ranged program attack (+6) against a visible compatible powered target. On a hit, deal 1d10 + 3 Electrical damage to physical HP, or 1d10 + 3 Data damage to ICE integrity in software mode. At total levels 5, 11 and 17, send 2, 3 and 4 packets respectively, each with its own attack and target. Output Amplifier adds Cool (+3) to every hit, included above.",
       "requirements": "Wirelessly target powered Cyberware or an electronic actor/object within range; its circuitry supplies the destructive current. Software mode targets reachable ICE and uses virtual AC. Declare each packet’s mode before attacking.",
-      "scaling": "Output Amplifier is a possible level-2 Firmware Upgrade, not currently installed.",
+      "scaling": "At character levels 5, 11 and 17, send 2, 3 and 4 packets respectively. Output Amplifier adds Cool to every hit.",
       "icon": "bolt"
     },
     {
@@ -252,6 +259,22 @@
       "requirements": "Wireless upload to compatible neural or motor-control Cyberware within range; no preliminary breach check. Spend one Execution Slot and maintain Concentration.",
       "scaling": "No higher-tier improvement.",
       "icon": "chip"
+    },
+    {
+      "id": "overheat",
+      "name": "Overheat",
+      "original": "Original campaign Quickhack",
+      "tier": 1,
+      "channel": "D",
+      "action": "Action",
+      "range": "60 ft",
+      "duration": "Up to 1 minute",
+      "concentration": true,
+      "summary": "Overload powered Cyberware to generate damaging heat.",
+      "effect": "One powered synthetic or living target with substantial powered Cyberware makes a Constitution Saving Throw against DC 14. On failure, it takes 2d6 Thermal damage immediately and 1d6 at the end of each of its turns, starting with its next turn. After each recurring damage instance, repeat the save; success ends the Program. Initial success negates the Program. The target can use an Action to shut down the addressed system and end the Program, losing that system’s benefit until it uses an Action to restart it.",
+      "requirements": "Wireless upload to a compatible powered target within range. Spend one Execution Slot and maintain Concentration. Heat comes from the addressed Cyberware; cannot address life support or fabricate fuel.",
+      "scaling": "Each Tier above 1 adds 1d6 to initial damage only.",
+      "icon": "bolt"
     }
   ],
   "features": [
@@ -259,8 +282,8 @@
       "id": "burst-processing",
       "name": "Burst Processing",
       "original": "Pact Magic",
-      "summary": "2 Utilities · 2 Programs · 1 Execution Slot",
-      "detail": "Cool is your program ability. Attack +6; save DC 14. Known software is fixed between levels. One tier-1 slot returns on a Short Rest or Long Rest. Utilities consume no slot. One Concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. If you execute a Bonus Action Program, every other Program on that turn must be a Utility with an execution time of one Action. This restriction applies in either order. All programs need their real equipment and access."
+      "summary": "2 Utilities · 3 Programs · 2 Execution Slots",
+      "detail": "Cool is your program ability. Attack +6; save DC 14. Known software is fixed between levels. Two tier-1 slots return on a Short Rest or Long Rest. Utilities consume no slot. One Concentration program at a time; on damage make a Constitution save (+2), DC 10 or half damage, whichever is higher. If you execute a Bonus Action Program, every other Program on that turn must be a Utility with an execution time of one Action. This restriction applies in either order. All programs need their real equipment and access."
     },
     {
       "id": "semantic-link",
@@ -275,6 +298,20 @@
       "original": "Corporate Researcher",
       "summary": "Find the likely archive, department or specialist for a technical question",
       "detail": "You know how to identify the likely department or archive for a technical question and how to request access. Credentials, trust, time and actual access still matter. Former employment does not restore revoked permissions."
+    },
+    {
+      "id": "output-amplifier",
+      "name": "Output Amplifier",
+      "original": "Agonizing Blast",
+      "summary": "Firmware Upgrade · +3 damage per Short Circuit hit",
+      "detail": "Add your Cool modifier (+3) to every Short Circuit hit, including its Electrical and Data modes. Passive; no Action, Execution Slot or additional Load."
+    },
+    {
+      "id": "social-engineering",
+      "name": "Social Engineering",
+      "original": "Beguiling Influence",
+      "summary": "Firmware Upgrade · Deception +5 · Persuasion +5",
+      "detail": "Gain proficiency in Deception and Persuasion. Each currently uses Cool +3 and Proficiency Bonus +2, for +5. Existing proficiency is not doubled. Passive; no Action, Execution Slot or additional Load."
     }
   ],
   "cyberware": [
@@ -369,12 +406,13 @@
       "status": "Carried",
       "location": "On you · Pocket",
       "summary": "Refurbished handheld Agent · Calls, messages & maps",
-      "detail": "Black handheld with scuffed corners, an intact screen and charging lead. Calls, texts, maps, local Data Pool access and an organiser assistant. Prepaid number shared with Ronin and Dr Patricia Cárdenas, who saved Fen as Vik. Future clinic bookings go through Mori. Local service paid through 18 December 2078, 19:15.",
+      "detail": "Black handheld with scuffed corners, an intact screen and charging lead. Calls, texts, maps, local Data Pool access and an organiser assistant. Prepaid number shared with Ronin, Vera Sanz and Dr Patricia Cárdenas, who saved Fen as Vik. Future clinic bookings go through Mori. Local service paid through 18 December 2078, 19:15.",
       "icon": "pack",
       "acquired": true,
       "number_shared_with": [
         "Ronin",
-        "Dr Patricia Cárdenas"
+        "Dr Patricia Cárdenas",
+        "Vera Sanz"
       ],
       "location_id": "on-person"
     },
@@ -383,11 +421,11 @@
       "name": "Shinsei Red",
       "status": "Carried",
       "location": "On you · Pocket",
-      "summary": "Japanese cigarettes · 19 remaining",
-      "detail": "Red-and-white pack of Shinsei Red cigarettes. Nineteen remain.",
+      "summary": "Japanese cigarettes · 18 remaining",
+      "detail": "Red-and-white pack of Shinsei Red cigarettes. Eighteen remain.",
       "icon": "pack",
       "acquired": true,
-      "quantity": 19,
+      "quantity": 18,
       "location_id": "on-person"
     },
     {
@@ -538,7 +576,7 @@
     }
   ],
   "finances": {
-    "cash": 476,
+    "cash": 1460,
     "bank": "Frozen",
     "housing": "Sunset Motel, Room 12 prepaid through 19 November, 22:00. Authorised occupant of Mori’s Unit Four workshop in Rancho Coronado. Corporate housing revoked.",
     "trauma_team": "Cancelled",
@@ -551,6 +589,13 @@
       "date": "2078",
       "title": "Fen Vikutā",
       "body": "Raised in Japan. Former Arasaka researcher specialising in engram modelling, cognitive systems and laboratory software."
+    },
+    {
+      "id": "background-driving-0273",
+      "type": "Background",
+      "date": "Before the raid",
+      "title": "Behind the wheel",
+      "body": "Years of serious driving and drifting in Japan and Night City made Fen an exceptional driver. His family’s influence protected him from much routine traffic enforcement; in Night City, corporate connections and occasional bribes helped.\n\nHis former car was a pearl-white Mizutani Shion MZ2 with dark graphite wheels, a carefully maintained interior, adjustable suspension, a limited-slip differential and upgraded brakes. Arasaka seized it with his corporate housing. Its whereabouts are unknown."
     },
     {
       "id": "scene-0080",
@@ -651,27 +696,48 @@
       "body": "Bought a folding cot, two fleece blankets and a pillow with pillowcase from Valley Home & Surplus for €$140. Carried everything back to Unit Four."
     },
     {
-      "id": "scene-0219",
-      "type": "Invitation",
-      "date": "19 / 11 / 2078 · 15:00",
-      "title": "Switchyard Repairs — invitation pending",
-      "body": "Vera Sanz offered to meet at Switchyard Repairs to discuss retrieval work. Attendance has not been confirmed and no job accepted. The target, security, crew and payment remain to be discussed."
-    },
-    {
       "id": "scene-0220",
       "type": "Story",
       "date": "19 / 11 / 2078 · 13:07",
       "title": "Settling in",
       "body": "Ate one meal, drank a litre of water and set up the cot, both blankets and pillow in Unit Four’s rear room. Two sealed meals and 2.5 litres of water remain here. Ronin’s deck call is still open."
+    },
+    {
+      "id": "scene-0249",
+      "type": "Story",
+      "date": "19 / 11 / 2078 · 14:50",
+      "title": "Back to Switchyard",
+      "body": "Slept for an hour on the cot, locked Unit Four and bought a chilli-cheese dog and energy drink for €$16. Ate and drank on the walk, then smoked one cigarette. Met Vera early to discuss field retrieval work. Stored supplies unchanged."
+    },
+    {
+      "id": "scene-0219",
+      "type": "Story",
+      "date": "19 / 11 / 2078 · 14:50",
+      "title": "Switchyard Repairs — meeting",
+      "body": "Attended Vera’s meeting early to discuss retrieval work. The resulting Cairn Instruments recovery was subsequently completed."
+    },
+    {
+      "id": "scene-0257",
+      "type": "Story",
+      "date": "19 / 11 / 2078 · 17:31",
+      "title": "Coldwater Recovery",
+      "body": "Accepted the inspection plan with Inez Barreto. Received a €$250 advance and Cairn’s loan diagnostic kit. Inez drove to the Arroyo yard. Arturo demonstrated the controller’s incomplete startup; Fen began inspecting the rig; the completed recovery is recorded below."
+    },
+    {
+      "id": "scene-0272",
+      "type": "Story",
+      "date": "19 / 11 / 2078 · 18:44",
+      "title": "Cairn Instruments — recovery completed",
+      "body": "Verified and recovered CI-146 from Coldwater without gunfire. Returned the rig and loan service kit to Vera at Switchyard. Remaining €$750 received; earned 150 XP, reaching level 2. Selected Output Amplifier, Social Engineering and Overheat."
     }
   ],
   "rules": {
     "rests": "Short Rest: 1 hour, restores Contractor slots. Long Rest: 8 hours under the normal 2014 requirements, once per 24 hours; begin with at least 1 HP. Restores class resources and half total Hit Dice (minimum 1). With adequate food and water, also restores Constitution modifier HP, minimum 1: currently 2 HP, up to your current maximum. Injury-specific HP recovery restrictions still apply.",
-    "convalescence": "Once per 24 hours, after 8 hours of rest with food, water and appropriate first aid, spend up to one quarter of total Hit Dice rounded up (half in a stocked clinic). At level 1 this is one d8 + 2, minimum 0 HP. Critical injuries must be treated first. This is additional to natural Long Rest recovery; the same eight hours can qualify for both. HP recovery leaves injury penalties and recovery clocks intact.",
+    "convalescence": "Once per 24 hours, after 8 hours of rest with food, water and appropriate first aid, spend up to one quarter of total Hit Dice rounded up (half in a stocked clinic). At level 2 this is one d8 + 2, minimum 0 HP. Critical injuries must be treated first. This is additional to natural Long Rest recovery; the same eight hours can qualify for both. HP recovery leaves injury penalties and recovery clocks intact.",
     "injuries": "The first damaging drop from positive HP to 0 in an encounter causes one critical injury. A critical hit above 0 does not. Standard injuries require treatment and 7 qualifying convalescence days; major injuries associated with a failed death save require surgery and 21 days.",
     "intrusion": "Quickhacks upload wirelessly within their printed range. Target identification and upload are part of execution; resolve the Program’s attack or Saving Throw. Utilities are at will; tiered Programs spend an Execution Slot. Effects need a physical source: powered Cyberware for an overload, fuel and ignition for a combustion blast, or a chemical payload for toxins. Ordinary use of owned equipment costs no Execution Slot. A Program adds its printed intrusion, automation or enhancement; a separate implant named after every Program is not required.",
     "capacity": "Native Neural Tolerance = max(4, 6 + Constitution modifier + Cool modifier) = 11. Add earned Adaptation, currently 0. Current Load: 0. Load above tolerance creates overload risk. Baseline replacements are Load 0. Operating Ronin Fragment doubles native Tolerance to 22 before Adaptation and Tolerance Injury.",
-    "progression": "Level 2 at 300 total XP: two tier-1 slots, three known programs and two Firmware Upgrades. Level 3: Interface Platform.",
+    "progression": "Level 2: two Tier-1 slots and three known Programs. Firmware Upgrades: Output Amplifier and Social Engineering. Known Programs: Vulnerability Tag, Neural Seizure and Overheat. Level 3 at 900 total XP: Interface Platform and Tier-2 slots.",
     "secured_intrusion": "Use Intelligence (Technology), currently +4, for meaningful obstacles such as protected files or persistent access. Routine work needs no roll; complex jobs can involve several distinct checks. This costs no Execution Slot. Active opposition can instead become a deep-dive combat encounter using normal initiative, actions, attacks and saves, with suitable deep-dive equipment.",
     "weapon_handling": "Arasaka Tamayura: semiautomatic Power pistol. Each attack spends one round. Detachable magazine reload: Action or Bonus Action with a free hand, once per turn, using an accessible compatible magazine. Magazine capacity 8; current load 7 in the magazine + 1 chambered. One empty standard 8-round spare magazine and 50 boxed matching cartridges owned. Total ammunition: 58, including 8 loaded.",
     "cyberware_overrides": "### Voluntary Override\nAn eligible implant can exceed a physiological recovery limit or safety governor. It uses its normal activation, prerequisites and duration, and supplies one activation. Each override costs 1 Stability, followed by a Cool save; success prevents further loss, while failure loses another 1, or 2 on failure by 5 or more, with the normal symptom procedure.\n\n### Escalating Risk\nOne shared counter covers every implant. Each earlier override since the last qualifying Long Rest adds +2 to the next override save DC, after the normal DC cap. Every override requires its save. A coincident ordinary trigger combines into that check. A qualifying Long Rest resets the counter; Stability recovers only through its separate recovery and treatment rules.\n\n### Eligibility\nThe equipment card specifies override eligibility. This bypasses a physiological or governor limit; it cannot refill Execution Slots, ammunition, injectors or air reserves, or repair broken hardware. Ordinary permitted use has no override cost. First reaching zero Stability cannot itself trigger lasting Tolerance Injury; the existing catastrophic-breakdown procedure still governs that risk.\n\n### Relative Acceleration\nSandevistan models specify normal and maximum overclock ratings. For physical weapon or unarmed attacks, a faster attacker has advantage against a slower target; a slower attacker has disadvantage. Equal ratings confer neither. Normal advantage cancellation, cover and targeting apply.\n\n### Overclock\nA supported overclock lasts until the start of your next ordinary turn, or until the implant ends. Each interval costs one override. Exceeding the safe-use allowance and overclocking the same activation count as one combined override. Each model defines its actual limits and activation timing.\n\n### Accelerated Turn\nA high-end model may grant one extra turn immediately after your ordinary turn, at most once per round: movement, an Action, an eligible Bonus Action and the normal object interaction. Extra Attack and eligible once-per-turn offensive features work normally. Resources, ammunition, Concentration and per-turn Program restrictions still apply.\n\n### Timing\nOnly ordinary turns advance ongoing damage or healing, cooldowns, condition expiry, death saves, scheduled recovery saves and Reaction refresh. Movement, attacks and other actual events still trigger their normal effects during accelerated activity. Extra turns cannot generate more accelerated turns; once-per-round features stay once per round.\n\n### Model Specifications\nDuration, safe uses, ratings, movement, Load and combinations belong to each model’s equipment card. The existing R3 reflex accelerator retains its listed effects. No Sandevistan is currently installed."
@@ -691,11 +757,11 @@
     "year": 2078,
     "month": 11,
     "day": 19,
-    "hour": 13,
-    "minute": 7,
+    "hour": 18,
+    "minute": 44,
     "period": "Late 2078",
-    "location": "Cinder Court - Unit Four",
+    "location": "Switchyard Repairs, Rancho Coronado",
     "time_basis": "Local time",
-    "event_id": "scene-0220"
+    "event_id": "scene-0272"
   }
 }
