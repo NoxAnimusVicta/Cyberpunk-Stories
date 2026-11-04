@@ -12,15 +12,15 @@ A personal, unofficial Cyberpunk story companion for Fen Vikutā, using a campai
 - **Inventory:** On You for carried gear; Storage for possessions at each named location. Tap a category tile to open its items; Storage first presents location buttons. Weapons includes ammunition and magazines; holsters sit under Armour & Clothing. Six core tiles remain visible, including Medical and Vehicles when empty. Cash remains visible beside the heading.
 - **Journal:** player-known story entries and reference rules.
 
-Current character snapshot: **19 November 2078, 18:44 — Switchyard Repairs, Rancho Coronado**, after completing the Cairn Instruments recovery. Fen is **Contractor level 2**, with **Output Amplifier**, **Social Engineering** and **Overheat** selected. Interface and character release **0274.1**; class reference **0246.1**. The enacted scene is **0272**, with character selections confirmed in **0273**. The story clock changes with play, not real-world time. The app is a maintained reference; it does not advance the story or make character choices.
+Current character snapshot: **19 November 2078, 18:44 — Switchyard Repairs, Rancho Coronado**, after completing the Cairn Instruments recovery. Fen is **Contractor level 2**, with **Output Amplifier**, **Social Engineering** and **Overheat** selected. Interface and class reference **0313.1**; character release **0301.1**. The enacted scene is **0272**, with character selections confirmed in **0273**. The story clock changes with play, not real-world time. The app is a maintained reference; it does not advance the story or make character choices.
 
-On iPhone, open the companion in Safari and use **Share → Add to Home Screen**. Internet access is required. Export Sheet downloads the same player-facing record displayed by the app. Reload an already-open companion to receive this update.
+On iPhone, open the companion in Safari and use **Share → Add to Home Screen**. Internet access is required. Export Sheet downloads the same player-facing record displayed by the app. Reload an already-open companion to receive this update. Training XP is available in the Character class reference under Training.
 
 ## Rules and sources
 
-The public class reference contains Contractor progression, features, three Architectures, Firmware Upgrades, Interface Platforms, eligible Programs, chassis, feats, execution and recovery rules. Expanded Program lists supply learning choices, not automatically known software. Later-level choices are references rather than acquired abilities.
+The public class reference contains Contractor progression, features, three Architectures, Firmware Upgrades, Interface Platforms, eligible Programs, chassis, feats, execution, recovery and Training XP rules. Expanded Program lists supply learning choices, not automatically known software. Later-level choices are references rather than acquired abilities.
 
-The accepted cyberware override framework uses a shared escalating risk counter and separates accelerated turns from normal recovery clocks. Individual Sandevistan models still require complete operating cards before entering play.
+The accepted cyberware override framework uses a shared escalating risk counter and separates accelerated turns from normal recovery clocks. Named Sandevistan operating cards are maintained in the local equipment reference.
 
 The full twelve-class, forty-subclass conversion and wider armoury are maintained locally. The public repository does not distribute the sourcebooks or the complete narrator library. Magazine capacities follow the specific model and edition; campaign attack and damage values are converted rules. Homebrew mechanics have been checked for source and internal consistency, but are not certified encounter balance.
 
