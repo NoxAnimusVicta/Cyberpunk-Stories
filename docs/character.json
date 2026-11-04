@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "rules-0300",
-    "release": "0300.1",
+    "id": "rules-0301",
+    "release": "0301.1",
     "phase": "Recovery completed",
     "story_started": true,
     "period": "Late 2078",
@@ -162,8 +162,8 @@
     "current_tolerance": 13
   },
   "resources": {
-    "hp_current": 10,
-    "hp_note": "Physically uninjured. Level advancement increased maximum HP; current HP unchanged.",
+    "hp_current": 17,
+    "hp_note": "Full fighting condition. No critical injuries.",
     "xp": 350,
     "next_level_xp": 900,
     "slot_max": 2,
@@ -172,7 +172,7 @@
     "temporary_hp": 0,
     "injuries_status": "None",
     "exhaustion_status": "None",
-    "rest_note": "Two Tier-1 Execution Slots return after a Short Rest or Long Rest. A qualifying fed and hydrated Long Rest restores 2 HP.",
+    "rest_note": "Two Tier-1 Execution Slots return after a Short Rest or Long Rest. A qualifying fed and hydrated Long Rest restores full HP.",
     "software_online": true,
     "slots_current": 1,
     "last_long_rest": {
@@ -733,12 +733,12 @@
     }
   ],
   "rules": {
-    "rests": "Short Rest: 1 hour, restores Contractor slots. Long Rest: 8 hours under the normal 2014 requirements, once per 24 hours; begin with at least 1 HP. Restores class resources and half total Hit Dice (minimum 1). With adequate food and water, also restores Constitution modifier HP, minimum 1: currently 2 HP, up to your current maximum. Injury-specific HP recovery restrictions still apply.",
-    "convalescence": "Once per 24 hours, after 8 hours of rest with food, water and appropriate first aid, spend up to one quarter of total Hit Dice rounded up (half in a stocked clinic). At level 2 this is one d8 + 2, minimum 0 HP. Critical injuries must be treated first. This is additional to natural Long Rest recovery; the same eight hours can qualify for both. HP recovery leaves injury penalties and recovery clocks intact.",
+    "rests": "Short Rest: 1 hour, restores Contractor slots. Long Rest: 8 hours under the normal 2014 requirements, once per 24 hours; begin with at least 1 HP. Restores class resources and half total Hit Dice, minimum 1. With adequate food and water, restores full HP to your effective maximum. Injuries and their penalties persist; exhaustion follows its separate recovery rule.",
+    "convalescence": "Once per 24 hours, after 8 hours of rest with food, water and appropriate first aid, spend up to one quarter of total Hit Dice rounded up (half in a stocked clinic). At level 2 this is one d8 + 2, minimum 0 HP. Critical injuries must be treated first. The same eight hours can qualify for a Long Rest; do not spend Hit Dice if it already restored full HP. Medical convalescence remains available when a Long Rest does not qualify. HP recovery leaves injury penalties and recovery clocks intact.",
     "injuries": "The first damaging drop from positive HP to 0 in an encounter causes one critical injury. A critical hit above 0 does not. Standard injuries require treatment and 7 qualifying convalescence days; major injuries associated with a failed death save require surgery and 21 days.",
     "intrusion": "Quickhacks upload wirelessly within their printed range. Target identification and upload are part of execution; resolve the Program’s attack or Saving Throw. Utilities are at will; tiered Programs spend an Execution Slot. Effects need a physical source: powered Cyberware for an overload, fuel and ignition for a combustion blast, or a chemical payload for toxins. Ordinary use of owned equipment costs no Execution Slot. A Program adds its printed intrusion, automation or enhancement; a separate implant named after every Program is not required.",
     "capacity": "Native Neural Tolerance = max(4, 6 + Constitution modifier + Cool modifier) = 11. Add earned Adaptation, currently 0. Current Load: 0. Load above tolerance creates overload risk. Baseline replacements are Load 0. Operating Ronin Fragment multiplies native Tolerance by 1.2, rounded down: floor(11 × 1.2) = 13. Add Adaptation, then subtract lasting Tolerance Injury, to a minimum Tolerance of 1. Upgraded Fragments replace the existing multiplier rather than stacking.",
-    "progression": "Level 2: two Tier-1 slots and three known Programs. Firmware Upgrades: Output Amplifier and Social Engineering. Known Programs: Vulnerability Tag, Neural Seizure and Overheat. Level 3 at 900 total XP: Interface Platform and Tier-2 slots.",
+    "progression": "Level 2: two Tier-1 slots and three known Programs. Firmware Upgrades: Output Amplifier and Social Engineering. Known Programs: Vulnerability Tag, Neural Seizure and Overheat. Level 3 at 900 total XP: Interface Platform and Tier-2 slots. On level advancement: new HP = floor(previous HP × new maximum / previous maximum). Full HP remains full; zero remains zero. Other resources are not replenished.",
     "secured_intrusion": "Use Intelligence (Technology), currently +4, for meaningful obstacles such as protected files or persistent access. Routine work needs no roll; complex jobs can involve several distinct checks. This costs no Execution Slot. Active opposition can instead become a deep-dive combat encounter using normal initiative, actions, attacks and saves, with suitable deep-dive equipment.",
     "weapon_handling": "Arasaka Tamayura: semiautomatic Power pistol. Each attack spends one round. Detachable magazine reload: Action or Bonus Action with a free hand, once per turn, using an accessible compatible magazine. Magazine capacity 8; current load 7 in the magazine + 1 chambered. One empty standard 8-round spare magazine and 50 boxed matching cartridges owned. Total ammunition: 58, including 8 loaded.",
     "cyberware_overrides": "### Voluntary Override\nAn eligible implant can exceed a physiological recovery limit or safety governor. It uses its normal activation, prerequisites and duration, and supplies one activation. Each override costs 1 Stability, followed by a Cool save; success prevents further loss, while failure loses another 1, or 2 on failure by 5 or more, with the normal symptom procedure.\n\n### Escalating Risk\nOne shared counter covers every implant. Each earlier override since the last qualifying Long Rest adds +2 to the next override save DC, after the normal DC cap. Every override requires its save. A coincident ordinary trigger combines into that check. A qualifying Long Rest resets the counter; Stability recovers only through its separate recovery and treatment rules.\n\n### Eligibility\nThe equipment card specifies override eligibility. This bypasses a physiological or governor limit; it cannot refill Execution Slots, ammunition, injectors or air reserves, or repair broken hardware. Ordinary permitted use has no override cost. First reaching zero Stability cannot itself trigger lasting Tolerance Injury; the existing catastrophic-breakdown procedure still governs that risk.\n\n### Relative Acceleration\nSandevistan models specify normal and maximum overclock ratings. For physical weapon or unarmed attacks, a faster attacker has advantage against a slower target; a slower attacker has disadvantage. Equal ratings confer neither. Normal advantage cancellation, cover and targeting apply.\n\n### Overclock\nA supported overclock lasts until the start of your next ordinary turn, or until the implant ends. Each interval costs one override. Exceeding the safe-use allowance and overclocking the same activation count as one combined override. Each model defines its actual limits and activation timing.\n\n### Accelerated Turn\nA high-end model may grant one extra turn immediately after your ordinary turn, at most once per round: movement, an Action, an eligible Bonus Action and the normal object interaction. Extra Attack and eligible once-per-turn offensive features work normally. Resources, ammunition, Concentration and per-turn Program restrictions still apply.\n\n### Timing\nOnly ordinary turns advance ongoing damage or healing, cooldowns, condition expiry, death saves, scheduled recovery saves and Reaction refresh. Movement, attacks and other actual events still trigger their normal effects during accelerated activity. Extra turns cannot generate more accelerated turns; once-per-round features stay once per round.\n\n### Model Specifications\nDuration, safe uses, ratings, movement, Load and combinations belong to each model’s equipment card. The existing R3 reflex accelerator retains its listed effects. No Sandevistan is currently installed."
