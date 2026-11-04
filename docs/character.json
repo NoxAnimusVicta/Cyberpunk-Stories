@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "id": "selection-0273",
-    "release": "0274.1",
+    "id": "rules-0300",
+    "release": "0300.1",
     "phase": "Recovery completed",
     "story_started": true,
     "period": "Late 2078",
@@ -159,7 +159,7 @@
     "passive_investigation": 14,
     "carry_lb": 135,
     "virtual_ac": 14,
-    "current_tolerance": 22
+    "current_tolerance": 13
   },
   "resources": {
     "hp_current": 10,
@@ -355,9 +355,10 @@
       "installed": true,
       "icon": "chip",
       "summary": "Arasaka Shadow Mk.1 Cyberdeck running Ronin’s local Fragment",
-      "detail": "An Arasaka Shadow Mk.1 Cyberdeck loaded with Ronin’s bounded local Fragment, connected through the NP-1 neural interface. Slim black casing, translucent red circuitry cover and white Arasaka markings. The Fragment replaces the corporate firmware, disabling Arasaka telemetry, remote administration and manufacturer backdoors. Occupies one shard socket while slotted. While operating, doubles native Neural Tolerance before earned Adaptation and lasting Tolerance Injury: 11 → 22, and grants +1 to Contractor Program attack rolls and Program Save DC, including Utilities: Attack +6, DC 14 at current attributes. Supplies the Contractor interface locally; these passive benefits require no extra charge or Execution Slot. Removal ends these bonuses; recalculate Tolerance, Overload and the Stability ceiling under the normal rules. A makeshift Agent function added during the jailbreak supports calls to and from Ronin only.",
+      "detail": "An Arasaka Shadow Mk.1 Cyberdeck loaded with Ronin’s bounded local Fragment, connected through the NP-1 neural interface. Slim black casing, translucent red circuitry cover and white Arasaka markings. The Fragment replaces the corporate firmware, disabling Arasaka telemetry, remote administration and manufacturer backdoors. Occupies one shard socket while slotted. While operating, multiplies native Neural Tolerance by 1.2, rounded down before earned Adaptation and lasting Tolerance Injury: 11 → 13, and grants +1 to Contractor Program attack rolls and Program Save DC, including Utilities: Attack +6, DC 14 at current attributes. Supplies the Contractor interface locally; these passive benefits require no extra charge or Execution Slot. Removal ends these bonuses; recalculate Tolerance, Overload and the Stability ceiling under the normal rules. A makeshift Agent function added during the jailbreak supports calls to and from Ronin only.",
       "condition": "Local Runtime",
-      "display_grade": "CLASS APPARATUS"
+      "display_grade": "CLASS APPARATUS",
+      "tolerance_multiplier": 1.2
     }
   ],
   "inventory": [
@@ -736,7 +737,7 @@
     "convalescence": "Once per 24 hours, after 8 hours of rest with food, water and appropriate first aid, spend up to one quarter of total Hit Dice rounded up (half in a stocked clinic). At level 2 this is one d8 + 2, minimum 0 HP. Critical injuries must be treated first. This is additional to natural Long Rest recovery; the same eight hours can qualify for both. HP recovery leaves injury penalties and recovery clocks intact.",
     "injuries": "The first damaging drop from positive HP to 0 in an encounter causes one critical injury. A critical hit above 0 does not. Standard injuries require treatment and 7 qualifying convalescence days; major injuries associated with a failed death save require surgery and 21 days.",
     "intrusion": "Quickhacks upload wirelessly within their printed range. Target identification and upload are part of execution; resolve the Program’s attack or Saving Throw. Utilities are at will; tiered Programs spend an Execution Slot. Effects need a physical source: powered Cyberware for an overload, fuel and ignition for a combustion blast, or a chemical payload for toxins. Ordinary use of owned equipment costs no Execution Slot. A Program adds its printed intrusion, automation or enhancement; a separate implant named after every Program is not required.",
-    "capacity": "Native Neural Tolerance = max(4, 6 + Constitution modifier + Cool modifier) = 11. Add earned Adaptation, currently 0. Current Load: 0. Load above tolerance creates overload risk. Baseline replacements are Load 0. Operating Ronin Fragment doubles native Tolerance to 22 before Adaptation and Tolerance Injury.",
+    "capacity": "Native Neural Tolerance = max(4, 6 + Constitution modifier + Cool modifier) = 11. Add earned Adaptation, currently 0. Current Load: 0. Load above tolerance creates overload risk. Baseline replacements are Load 0. Operating Ronin Fragment multiplies native Tolerance by 1.2, rounded down: floor(11 × 1.2) = 13. Add Adaptation, then subtract lasting Tolerance Injury, to a minimum Tolerance of 1. Upgraded Fragments replace the existing multiplier rather than stacking.",
     "progression": "Level 2: two Tier-1 slots and three known Programs. Firmware Upgrades: Output Amplifier and Social Engineering. Known Programs: Vulnerability Tag, Neural Seizure and Overheat. Level 3 at 900 total XP: Interface Platform and Tier-2 slots.",
     "secured_intrusion": "Use Intelligence (Technology), currently +4, for meaningful obstacles such as protected files or persistent access. Routine work needs no roll; complex jobs can involve several distinct checks. This costs no Execution Slot. Active opposition can instead become a deep-dive combat encounter using normal initiative, actions, attacks and saves, with suitable deep-dive equipment.",
     "weapon_handling": "Arasaka Tamayura: semiautomatic Power pistol. Each attack spends one round. Detachable magazine reload: Action or Bonus Action with a free hand, once per turn, using an accessible compatible magazine. Magazine capacity 8; current load 7 in the magazine + 1 chambered. One empty standard 8-round spare magazine and 50 boxed matching cartridges owned. Total ammunition: 58, including 8 loaded.",
